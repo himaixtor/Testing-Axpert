@@ -1,0 +1,18 @@
+# Next.js
+.next/
+out/
+
+# Node
+node_modules/
+
+# Local logs
+dev.log
+
+# Visual regression / reports (generated)
+backstop_data/
+data/reports/
+
+# Backstop run folder (keep only config)
+visual-test-results/*
+!visual-test-results/backstop.json
+
