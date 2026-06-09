@@ -1,0 +1,31 @@
+{
+  "name": "testing-axpert",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0",
+    "lucide-react": "^0.378.0",
+    "next": "^14.2.3",
+    "playwright": "^1.44.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@applitools/eyes-playwright": "^1.47.5",
+    "@percy/cli": "^1.31.14",
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "backstopjs": "^6.3.25",
+    "chromatic": "^17.3.0",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.3",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,964 @@
+{
+  "id": "1780925957551",
+  "timestamp": "2026-06-08T13:39:30.464Z",
+  "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+  "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+  "pagesChecked": 5,
+  "durationMs": 12913,
+  "status": "WARNING",
+  "summary": {
+    "passed": 0,
+    "failed": 0,
+    "warnings": 14,
+    "total": 14
+  },
+  "categoryBreakdown": {
+    "ui": {
+      "passed": 0,
+      "failed": 0,
+      "warnings": 14,
+      "total": 14
+    }
+  },
+  "results": [
+    {
+      "pageUrl": "/",
+      "category": "UI Testing",
+      "subTest": "Typography: Heading Size",
+      "expectedValue": "Production: 18px",
+      "actualValue": "UAT: 20px",
+      "differenceDescription": "Heading computed size changed. Production = 18px, UAT = 20px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:23.119Z",
+      "elementClass": "portlet-title-text",
+      "elementTag": "h2",
+      "elementSelector": "h1, h2, h3"
+    },
+    {
+      "pageUrl": "/",
+      "category": "UI Testing",
+      "subTest": "Buttons: Text Color",
+      "expectedValue": "Production: rgba(255, 255, 255, 0.5)",
+      "actualValue": "UAT: rgb(255, 255, 255)",
+      "differenceDescription": "Button foreground text color changed. Production = rgba(255, 255, 255, 0.5), UAT = rgb(255, 255, 255)",
+      "severity": "HIGH",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:23.124Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    },
+    {
+      "pageUrl": "/",
+      "category": "UI Testing",
+      "subTest": "Buttons: Corner Border Radius",
+      "expectedValue": "Production: 4px",
+      "actualValue": "UAT: 2px",
+      "differenceDescription": "Button border-radius shape changed. Production = 4px, UAT = 2px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:23.127Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    },
+    {
+      "pageUrl": "/home-loan-on-whatsapp",
+      "category": "UI Testing",
+      "subTest": "Typography: Heading Size",
+      "expectedValue": "Production: 24px",
+      "actualValue": "UAT: 20px",
+      "differenceDescription": "Heading computed size changed. Production = 24px, UAT = 20px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:25.034Z",
+      "elementClass": "portlet-title-text",
+      "elementTag": "h2",
+      "elementSelector": "h1, h2, h3"
+    },
+    {
+      "pageUrl": "/home-loan-on-whatsapp",
+      "category": "UI Testing",
+      "subTest": "Buttons: Text Color",
+      "expectedValue": "Production: rgba(255, 255, 255, 0.5)",
+      "actualValue": "UAT: rgb(255, 255, 255)",
+      "differenceDescription": "Button foreground text color changed. Production = rgba(255, 255, 255, 0.5), UAT = rgb(255, 255, 255)",
+      "severity": "HIGH",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:25.037Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    },
+    {
+      "pageUrl": "/home-loan-on-whatsapp",
+      "category": "UI Testing",
+      "subTest": "Buttons: Corner Border Radius",
+      "expectedValue": "Production: 4px",
+      "actualValue": "UAT: 2px",
+      "differenceDescription": "Button border-radius shape changed. Production = 4px, UAT = 2px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:25.039Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    },
+    {
+      "pageUrl": "/etb-preapproved-loans-application-form",
+      "category": "UI Testing",
+      "subTest": "Buttons: Background Color",
+      "expectedValue": "Production: rgb(240, 240, 240)",
+      "actualValue": "UAT: rgb(254, 121, 23)",
+      "differenceDescription": "Main Action Button color changed. Production = rgb(240, 240, 240), UAT = rgb(254, 121, 23)",
+      "severity": "HIGH",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:26.249Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    },
+    {
+      "pageUrl": "/etb-preapproved-loans-application-form",
+      "category": "UI Testing",
+      "subTest": "Buttons: Corner Border Radius",
+      "expectedValue": "Production: 30px",
+      "actualValue": "UAT: 2px",
+      "differenceDescription": "Button border-radius shape changed. Production = 30px, UAT = 2px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:26.251Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    },
+    {
+      "pageUrl": "/ivr-feedback",
+      "category": "UI Testing",
+      "subTest": "Typography: Heading Size",
+      "expectedValue": "Production: 24px",
+      "actualValue": "UAT: 20px",
+      "differenceDescription": "Heading computed size changed. Production = 24px, UAT = 20px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:28.861Z",
+      "elementClass": "portlet-title-text",
+      "elementTag": "h2",
+      "elementSelector": "h1, h2, h3"
+    },
+    {
+      "pageUrl": "/ivr-feedback",
+      "category": "UI Testing",
+      "subTest": "Typography: Font Weight",
+      "expectedValue": "Production: 600",
+      "actualValue": "UAT: 500",
+      "differenceDescription": "Font weight styling changed. Production = 600, UAT = 500",
+      "severity": "LOW",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:28.863Z",
+      "elementClass": "portlet-title-text",
+      "elementTag": "h2",
+      "elementSelector": "h1, h2, h3"
+    },
+    {
+      "pageUrl": "/digital-ads-lite-application-form-thank-you",
+      "category": "UI Testing",
+      "subTest": "Typography: Heading Size",
+      "expectedValue": "Production: 14px",
+      "actualValue": "UAT: 20px",
+      "differenceDescription": "Heading computed size changed. Production = 14px, UAT = 20px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:30.349Z",
+      "elementClass": "portlet-title-text",
+      "elementTag": "h2",
+      "elementSelector": "h1, h2, h3"
+    },
+    {
+      "pageUrl": "/digital-ads-lite-application-form-thank-you",
+      "category": "UI Testing",
+      "subTest": "Typography: Font Weight",
+      "expectedValue": "Production: 400",
+      "actualValue": "UAT: 500",
+      "differenceDescription": "Font weight styling changed. Production = 400, UAT = 500",
+      "severity": "LOW",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:30.351Z",
+      "elementClass": "portlet-title-text",
+      "elementTag": "h2",
+      "elementSelector": "h1, h2, h3"
+    },
+    {
+      "pageUrl": "/digital-ads-lite-application-form-thank-you",
+      "category": "UI Testing",
+      "subTest": "Buttons: Text Color",
+      "expectedValue": "Production: rgba(255, 255, 255, 0.5)",
+      "actualValue": "UAT: rgb(255, 255, 255)",
+      "differenceDescription": "Button foreground text color changed. Production = rgba(255, 255, 255, 0.5), UAT = rgb(255, 255, 255)",
+      "severity": "HIGH",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:30.353Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    },
+    {
+      "pageUrl": "/digital-ads-lite-application-form-thank-you",
+      "category": "UI Testing",
+      "subTest": "Buttons: Corner Border Radius",
+      "expectedValue": "Production: 4px",
+      "actualValue": "UAT: 2px",
+      "differenceDescription": "Button border-radius shape changed. Production = 4px, UAT = 2px",
+      "severity": "MEDIUM",
+      "status": "WARNING",
+      "timestamp": "2026-06-08T13:39:30.357Z",
+      "elementClass": "cc-btn cc-dismiss cc-btn-format",
+      "elementTag": "a",
+      "elementSelector": "button, a[class*=\"btn\"]"
+    }
+  ],
+  "logs": {
+    "execution": [
+      "[2026-06-08T13:39:17.552Z] Starting validation job #1780925957551",
+      "[2026-06-08T13:39:17.553Z] Run mode: file-upload",
+      "[2026-06-08T13:39:17.553Z] Selected categories: [\"ui\"]",
+      "[2026-06-08T13:39:17.553Z] File-upload mode: 840 lower environment URLs",
+      "[2026-06-08T13:39:17.553Z] File-upload mode: 840 production environment URLs",
+      "[2026-06-08T13:39:17.556Z] File URL matching: matched=840, lowerOnly=0, productionOnly=0",
+      "[2026-06-08T13:39:17.556Z] Limiting check to first 5 URLs.",
+      "[2026-06-08T13:39:17.556Z] Launching Playwright Chromium browser instances...",
+      "[2026-06-08T13:39:18.620Z] Validating page [1/5]: /",
+      "[2026-06-08T13:39:18.620Z] Navigating Lower: http://corpuat74.bajajhousingfinance.in:8080/",
+      "[2026-06-08T13:39:20.108Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=8&frm=0&ae=g&auid=1922220874.1780925960&dt=Bajaj%20Housing%20Finance%20-%20Leading%20Non-Banking%20Financial%20Company%20in%20India&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2F&scrsrc=www.googletagmanager.com&rnd=259608606.1780925960&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469~118131810~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780925959934&tfd=1308 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:20.287Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:20.287Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:20.288Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:20.289Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:20.497Z] Navigating Production: https://corpuat.bajajhousingfinance.in/",
+      "[2026-06-08T13:39:20.499Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925959027&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=17&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616986~115938466~115938469~118228215~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2F&sid=1780925960&sct=1&seg=0&dt=Bajaj%20Housing%20Finance%20-%20Leading%20Non-Banking%20Financial%20Company%20in%20India&en=page_view&_fv=1&_ss=1&tfd=1640 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:21.592Z] [Browser Console Error] Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+      "[2026-06-08T13:39:21.593Z] [Network Request Failed] http://twa.netcoresmartech.com/dispatchngntin - net::ERR_FAILED",
+      "[2026-06-08T13:39:21.593Z] [Browser Console Error] Failed to load resource: net::ERR_FAILED",
+      "[2026-06-08T13:39:21.593Z] [Browser Console Error] Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+      "[2026-06-08T13:39:21.594Z] [Network Request Failed] http://twa.netcoresmartech.com/dispatchngntin - net::ERR_FAILED",
+      "[2026-06-08T13:39:21.594Z] [Browser Console Error] Failed to load resource: net::ERR_FAILED",
+      "[2026-06-08T13:39:23.072Z] Executing UI Comparative Style Testing...",
+      "[2026-06-08T13:39:23.127Z] Validating page [2/5]: /home-loan-on-whatsapp",
+      "[2026-06-08T13:39:23.127Z] Navigating Lower: http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp",
+      "[2026-06-08T13:39:23.283Z] [Network Request Failed] https://f.clarity.ms/collect - net::ERR_ABORTED",
+      "[2026-06-08T13:39:23.283Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568za20gzb9205102759zd9205102759&_p=1780925959027&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=17&sr=1280x720&ul=en-gb&gaf=2&_s=2&tag_exp=0~115616986~115938466~115938469~118228215~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2F&sid=1780925960&sct=1&seg=0&dt=Bajaj%20Housing%20Finance%20-%20Leading%20Non-Banking%20Financial%20Company%20in%20India&en=user_engagement&_et=2993&tfd=4647 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:23.858Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=7&frm=0&ae=g&auid=1922220874.1780925960&dt=Apply%20for%20Home%20Loan%20on%20WhatsApp&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fhome-loan-on-whatsapp&scrsrc=www.googletagmanager.com&rnd=582782393.1780925964&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118131810~118228214~119027222&apve=1&apvf=f&apvc=1&tft=1780925963738&tfd=605 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:23.936Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:23.936Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:23.937Z] Navigating Production: https://corpuat.bajajhousingfinance.in/home-loan-on-whatsapp",
+      "[2026-06-08T13:39:23.939Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:23.939Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:23.999Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:23.999Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:24.286Z] [Browser Console Error] Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+      "[2026-06-08T13:39:24.286Z] [Network Request Failed] http://twa.netcoresmartech.com/dispatchngntin - net::ERR_FAILED",
+      "[2026-06-08T13:39:24.287Z] [Browser Console Error] Failed to load resource: net::ERR_FAILED",
+      "[2026-06-08T13:39:25.009Z] Executing UI Comparative Style Testing...",
+      "[2026-06-08T13:39:25.039Z] Validating page [3/5]: /etb-preapproved-loans-application-form",
+      "[2026-06-08T13:39:25.039Z] Navigating Lower: http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form",
+      "[2026-06-08T13:39:25.290Z] [Network Request Failed] https://f.clarity.ms/collect - net::ERR_ABORTED",
+      "[2026-06-08T13:39:25.290Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568za20gzb9205102759zd9205102759&_p=1780925963340&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=15&sr=1280x720&ul=en-gb&gaf=2&_s=2&tag_exp=0~115616985~115938466~115938469~118228214~119027224&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fhome-loan-on-whatsapp&sid=1780925960&sct=1&seg=1&dt=Apply%20for%20Home%20Loan%20on%20WhatsApp&en=user_engagement&ep.client_ID_event=947197930.1780925960.&_et=1446&tfd=2153 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:25.292Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925963340&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=15&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938469~118228214~119027224&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fhome-loan-on-whatsapp&sid=1780925960&sct=1&seg=1&dt=Apply%20for%20Home%20Loan%20on%20WhatsApp&en=page_view&ep.client_ID_event=947197930.1780925960.&_et=3&up.client_ID_user=947197930.1780925960.&tfd=2152 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:25.619Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=17&frm=0&ae=g&auid=1922220874.1780925960&dt=Pre-approved%20Loans%20Application%20Form&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fetb-preapproved-loans-application-form&scrsrc=www.googletagmanager.com&rnd=1485421593.1780925966&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938469~118131810~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780925965535&tfd=491 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:25.675Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.675Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.676Z] Navigating Production: https://corpuat.bajajhousingfinance.in/etb-preapproved-loans-application-form",
+      "[2026-06-08T13:39:25.678Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.678Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.734Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.734Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.745Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.746Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.751Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.751Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.763Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.764Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:25.967Z] [Browser Console Error] Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+      "[2026-06-08T13:39:25.968Z] [Network Request Failed] http://twa.netcoresmartech.com/dispatchngntin - net::ERR_FAILED",
+      "[2026-06-08T13:39:25.968Z] [Browser Console Error] Failed to load resource: net::ERR_FAILED",
+      "[2026-06-08T13:39:26.189Z] Executing UI Comparative Style Testing...",
+      "[2026-06-08T13:39:26.251Z] Validating page [4/5]: /ivr-feedback",
+      "[2026-06-08T13:39:26.251Z] Navigating Lower: http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback",
+      "[2026-06-08T13:39:26.431Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925965356&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=19&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938468~118228214~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fetb-preapproved-loans-application-form&sid=1780925960&sct=1&seg=1&dt=Pre-approved%20Loans%20Application%20Form&en=page_view&ep.client_ID_event=947197930.1780925960.&_et=5&up.client_ID_user=947197930.1780925960.&tfd=1377 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:26.432Z] [Network Request Failed] https://f.clarity.ms/collect - net::ERR_ABORTED",
+      "[2026-06-08T13:39:26.769Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=5&frm=0&ae=g&auid=1922220874.1780925960&dt=IVR%20Feedback&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fivr-feedback&scrsrc=www.googletagmanager.com&rnd=625027539.1780925967&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118131810~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780925966686&tfd=429 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:26.823Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.824Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.826Z] Navigating Production: https://corpuat.bajajhousingfinance.in/ivr-feedback",
+      "[2026-06-08T13:39:26.827Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.827Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.890Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.890Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.917Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.918Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.918Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.918Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.920Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:26.920Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:27.081Z] [Browser Console Error] Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+      "[2026-06-08T13:39:27.081Z] [Network Request Failed] http://twa.netcoresmartech.com/dispatchngntin - net::ERR_FAILED",
+      "[2026-06-08T13:39:27.082Z] [Browser Console Error] Failed to load resource: net::ERR_FAILED",
+      "[2026-06-08T13:39:28.784Z] Executing UI Comparative Style Testing...",
+      "[2026-06-08T13:39:28.863Z] Validating page [5/5]: /digital-ads-lite-application-form-thank-you",
+      "[2026-06-08T13:39:28.863Z] Navigating Lower: http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you",
+      "[2026-06-08T13:39:29.007Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568za20gzb9205102759zd9205102759&_p=1780925966481&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=8&sr=1280x720&ul=en-gb&gaf=2&_s=2&tag_exp=0~115616985~115938466~115938469~118228214~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fivr-feedback&sid=1780925960&sct=1&seg=1&dt=IVR%20Feedback&en=user_engagement&ep.client_ID_event=947197930.1780925960.&_et=2242&tfd=2742 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:29.008Z] [Network Request Failed] https://f.clarity.ms/collect - net::ERR_ABORTED",
+      "[2026-06-08T13:39:29.009Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925966481&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=8&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938469~118228214~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fivr-feedback&sid=1780925960&sct=1&seg=1&dt=IVR%20Feedback&en=page_view&ep.client_ID_event=947197930.1780925960.&_et=2&up.client_ID_user=947197930.1780925960.&tfd=2740 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:29.346Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=15&frm=0&ae=g&auid=1922220874.1780925960&dt=Home%20Loan%20%26%20LAP%20Application%20Form%20%7C%20Thank%20You&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fdigital-ads-lite-application-form-thank-you&scrsrc=www.googletagmanager.com&rnd=783670806.1780925969&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938469~118131810~118228215~119027224&apve=1&apvf=f&apvc=1&tft=1780925969266&tfd=398 - net::ERR_ABORTED",
+      "[2026-06-08T13:39:29.407Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.407Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.408Z] Navigating Production: https://corpuat.bajajhousingfinance.in/digital-ads-lite-application-form-thank-you",
+      "[2026-06-08T13:39:29.410Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.410Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.474Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.474Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.505Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.505Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.506Z] [Network Request Failed] https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960 - net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.506Z] [Browser Console Error] Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+      "[2026-06-08T13:39:29.675Z] [Browser Console Error] Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+      "[2026-06-08T13:39:29.676Z] [Network Request Failed] http://twa.netcoresmartech.com/dispatchngntin - net::ERR_FAILED",
+      "[2026-06-08T13:39:29.676Z] [Browser Console Error] Failed to load resource: net::ERR_FAILED",
+      "[2026-06-08T13:39:30.294Z] Executing UI Comparative Style Testing...",
+      "[2026-06-08T13:39:30.463Z] Compiling final validation summary metrics...",
+      "[2026-06-08T13:39:30.464Z] Saving report database entries..."
+    ],
+    "browser": [
+      {
+        "timestamp": "2026-06-08T13:39:19.857Z",
+        "type": "log",
+        "text": "TypeError: Cannot read properties of undefined (reading 'split')\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:63)\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:193)\n    at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28)\n    at Od.CO (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:938:440)\n    at Od.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:346:187)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)\n    at hb (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:230:719)\n    at Od.evaluate (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:270:72)\n    at Od.Xe (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:297:455)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:19.859Z",
+        "type": "log",
+        "text": "TypeError: Cannot read properties of undefined (reading 'split')\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:63)\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:193)\n    at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28)\n    at Od.CO (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:938:440)\n    at Od.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:346:187)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)\n    at hb (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:230:719)\n    at Od.evaluate (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:270:72)\n    at Od.Xe (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:297:455)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:19.903Z",
+        "type": "log",
+        "text": "TypeError: Cannot read properties of undefined (reading 'split')\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:64)\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:194)\n    at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28)\n    at Od.CO (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:938:440)\n    at Od.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:346:187)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)\n    at hb (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:230:719)\n    at Od.evaluate (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:270:72)\n    at Od.Xe (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:297:455)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:19.903Z",
+        "type": "log",
+        "text": "TypeError: Cannot read properties of undefined (reading 'split')\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:64)\n    at eval (eval at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28), <anonymous>:1:194)\n    at w.<computed>.e (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:5:28)\n    at Od.CO (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:938:440)\n    at Od.<anonymous> (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:346:187)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)\n    at hb (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:230:719)\n    at Od.evaluate (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:270:72)\n    at Od.Xe (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:297:455)\n    at k.apply (https://www.googletagmanager.com/gtm.js?id=GTM-N9TMN686:268:466)",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:20.009Z",
+        "type": "warning",
+        "text": "Hotjar not launching due to suspicious userAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.7778.96 Safari/537.36",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:20.022Z",
+        "type": "info",
+        "text": "Smartech Initiated",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:20.287Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:20.288Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:21.074Z",
+        "type": "log",
+        "text": "Messaging: Missing App configuration value: \"projectId\" (messaging/missing-app-config-values).",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:21.592Z",
+        "type": "error",
+        "text": "Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:21.593Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:21.593Z",
+        "type": "error",
+        "text": "Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:21.594Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:22.592Z",
+        "type": "log",
+        "text": "Firebase: Firebase App named '[DEFAULT]' already exists (app/duplicate-app).",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.745Z",
+        "type": "log",
+        "text": "Entering the function",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.782Z",
+        "type": "info",
+        "text": "Smartech Initiated",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.789Z",
+        "type": "warning",
+        "text": "Hotjar not launching due to suspicious userAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.7778.96 Safari/537.36",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.936Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.939Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.999Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:24.286Z",
+        "type": "error",
+        "text": "Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:24.287Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:24.891Z",
+        "type": "log",
+        "text": "Messaging: Missing App configuration value: \"projectId\" (messaging/missing-app-config-values).",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/home-loan-on-whatsapp"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.558Z",
+        "type": "info",
+        "text": "Smartech Initiated",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.675Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.678Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.734Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.745Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.751Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.764Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.967Z",
+        "type": "error",
+        "text": "Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.968Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/etb-preapproved-loans-application-form"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.542Z",
+        "type": "log",
+        "text": "errorVal :  true",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.698Z",
+        "type": "warning",
+        "text": "Hotjar not launching due to suspicious userAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.7778.96 Safari/537.36",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.708Z",
+        "type": "info",
+        "text": "Smartech Initiated",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.824Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.827Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.890Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.918Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.918Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.920Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:27.081Z",
+        "type": "error",
+        "text": "Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:27.082Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:27.775Z",
+        "type": "log",
+        "text": "Messaging: Missing App configuration value: \"projectId\" (messaging/missing-app-config-values).",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/ivr-feedback"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.281Z",
+        "type": "warning",
+        "text": "Hotjar not launching due to suspicious userAgent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/148.0.7778.96 Safari/537.36",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.290Z",
+        "type": "info",
+        "text": "Smartech Initiated",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.407Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.410Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.474Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.505Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.506Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_CERT_AUTHORITY_INVALID",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.675Z",
+        "type": "error",
+        "text": "Access to XMLHttpRequest at 'http://twa.netcoresmartech.com/dispatchngntin' from origin 'http://corpuat74.bajajhousingfinance.in:8080' has been blocked by CORS policy: Response to preflight request doesn't pass access control check: Redirect is not allowed for a preflight request.",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.676Z",
+        "type": "error",
+        "text": "Failed to load resource: net::ERR_FAILED",
+        "url": "http://corpuat74.bajajhousingfinance.in:8080/digital-ads-lite-application-form-thank-you"
+      }
+    ],
+    "network": [
+      {
+        "timestamp": "2026-06-08T13:39:20.108Z",
+        "url": "https://www.google.com/ccm/collect?rcb=8&frm=0&ae=g&auid=1922220874.1780925960&dt=Bajaj%20Housing%20Finance%20-%20Leading%20Non-Banking%20Financial%20Company%20in%20India&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2F&scrsrc=www.googletagmanager.com&rnd=259608606.1780925960&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469~118131810~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780925959934&tfd=1308",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:20.287Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:20.288Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:20.499Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925959027&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGAC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=17&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616986~115938466~115938469~118228215~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2F&sid=1780925960&sct=1&seg=0&dt=Bajaj%20Housing%20Finance%20-%20Leading%20Non-Banking%20Financial%20Company%20in%20India&en=page_view&_fv=1&_ss=1&tfd=1640",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:21.593Z",
+        "url": "http://twa.netcoresmartech.com/dispatchngntin",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:21.594Z",
+        "url": "http://twa.netcoresmartech.com/dispatchngntin",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.283Z",
+        "url": "https://f.clarity.ms/collect",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.283Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568za20gzb9205102759zd9205102759&_p=1780925959027&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=17&sr=1280x720&ul=en-gb&gaf=2&_s=2&tag_exp=0~115616986~115938466~115938469~118228215~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2F&sid=1780925960&sct=1&seg=0&dt=Bajaj%20Housing%20Finance%20-%20Leading%20Non-Banking%20Financial%20Company%20in%20India&en=user_engagement&_et=2993&tfd=4647",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.858Z",
+        "url": "https://www.google.com/ccm/collect?rcb=7&frm=0&ae=g&auid=1922220874.1780925960&dt=Apply%20for%20Home%20Loan%20on%20WhatsApp&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fhome-loan-on-whatsapp&scrsrc=www.googletagmanager.com&rnd=582782393.1780925964&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118131810~118228214~119027222&apve=1&apvf=f&apvc=1&tft=1780925963738&tfd=605",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.936Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.939Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:23.999Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:24.286Z",
+        "url": "http://twa.netcoresmartech.com/dispatchngntin",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.290Z",
+        "url": "https://f.clarity.ms/collect",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.290Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568za20gzb9205102759zd9205102759&_p=1780925963340&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=15&sr=1280x720&ul=en-gb&gaf=2&_s=2&tag_exp=0~115616985~115938466~115938469~118228214~119027224&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fhome-loan-on-whatsapp&sid=1780925960&sct=1&seg=1&dt=Apply%20for%20Home%20Loan%20on%20WhatsApp&en=user_engagement&ep.client_ID_event=947197930.1780925960.&_et=1446&tfd=2153",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.292Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925963340&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=15&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938469~118228214~119027224&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fhome-loan-on-whatsapp&sid=1780925960&sct=1&seg=1&dt=Apply%20for%20Home%20Loan%20on%20WhatsApp&en=page_view&ep.client_ID_event=947197930.1780925960.&_et=3&up.client_ID_user=947197930.1780925960.&tfd=2152",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.619Z",
+        "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&ae=g&auid=1922220874.1780925960&dt=Pre-approved%20Loans%20Application%20Form&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fetb-preapproved-loans-application-form&scrsrc=www.googletagmanager.com&rnd=1485421593.1780925966&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938469~118131810~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780925965535&tfd=491",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.675Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.678Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.734Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.745Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.751Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.763Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:25.968Z",
+        "url": "http://twa.netcoresmartech.com/dispatchngntin",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.431Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925965356&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=19&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938468~118228214~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fetb-preapproved-loans-application-form&sid=1780925960&sct=1&seg=1&dt=Pre-approved%20Loans%20Application%20Form&en=page_view&ep.client_ID_event=947197930.1780925960.&_et=5&up.client_ID_user=947197930.1780925960.&tfd=1377",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.432Z",
+        "url": "https://f.clarity.ms/collect",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.769Z",
+        "url": "https://www.google.com/ccm/collect?rcb=5&frm=0&ae=g&auid=1922220874.1780925960&dt=IVR%20Feedback&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fivr-feedback&scrsrc=www.googletagmanager.com&rnd=625027539.1780925967&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118131810~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780925966686&tfd=429",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.823Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.827Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.890Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.917Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.918Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:26.920Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:27.081Z",
+        "url": "http://twa.netcoresmartech.com/dispatchngntin",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_FAILED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.007Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568za20gzb9205102759zd9205102759&_p=1780925966481&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=8&sr=1280x720&ul=en-gb&gaf=2&_s=2&tag_exp=0~115616985~115938466~115938469~118228214~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fivr-feedback&sid=1780925960&sct=1&seg=1&dt=IVR%20Feedback&en=user_engagement&ep.client_ID_event=947197930.1780925960.&_et=2242&tfd=2742",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.008Z",
+        "url": "https://f.clarity.ms/collect",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.009Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-HHL9ZPGFWM&gtm=45je6631v9105346568z89205102759za20gzb9205102759zd9205102759&_p=1780925966481&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAGQC&are=1&cid=947197930.1780925960&frm=0&pscdl=noapi&rcb=8&sr=1280x720&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938469~118228214~119027222&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fivr-feedback&sid=1780925960&sct=1&seg=1&dt=IVR%20Feedback&en=page_view&ep.client_ID_event=947197930.1780925960.&_et=2&up.client_ID_user=947197930.1780925960.&tfd=2740",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.346Z",
+        "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&ae=g&auid=1922220874.1780925960&dt=Home%20Loan%20%26%20LAP%20Application%20Form%20%7C%20Thank%20You&en=page_view&dl=http%3A%2F%2Fcorpuat74.bajajhousingfinance.in%3A8080%2Fdigital-ads-lite-application-form-thank-you&scrsrc=www.googletagmanager.com&rnd=783670806.1780925969&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v9205102759za200zd9205102759xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938469~118131810~118228215~119027224&apve=1&apvf=f&apvc=1&tft=1780925969266&tfd=398",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.407Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.410Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.474Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.505Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.506Z",
+        "url": "https://ga-rt-hit-dot-bajaj-finserv-177211.appspot.com/collect?cid=947197930.1780925960",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_CERT_AUTHORITY_INVALID"
+      },
+      {
+        "timestamp": "2026-06-08T13:39:29.676Z",
+        "url": "http://twa.netcoresmartech.com/dispatchngntin",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_FAILED"
+      }
+    ],
+    "error": []
+  }
+}

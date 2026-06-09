@@ -1,0 +1,6 @@
+{
+  "/api/reports/route": "app/api/reports/route.js",
+  "/api/validation/status/route": "app/api/validation/status/route.js",
+  "/page": "app/page.js",
+  "/api/reports/export/route": "app/api/reports/export/route.js"
+}

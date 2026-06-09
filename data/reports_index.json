@@ -1,0 +1,323 @@
+[
+  {
+    "id": "1780988899650",
+    "timestamp": "2026-06-09T07:09:23.812Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 64162,
+    "status": "FAIL",
+    "summary": {
+      "passed": 18,
+      "failed": 5,
+      "warnings": 27,
+      "total": 50
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 8,
+        "failed": 5,
+        "warnings": 17,
+        "total": 30
+      },
+      "visual-comprehensive": {
+        "passed": 10,
+        "failed": 0,
+        "warnings": 10,
+        "total": 20
+      }
+    }
+  },
+  {
+    "id": "1780988489106",
+    "timestamp": "2026-06-09T07:01:44.527Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 15420,
+    "status": "WARNING",
+    "summary": {
+      "passed": 23,
+      "failed": 0,
+      "warnings": 14,
+      "total": 37
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 23,
+        "failed": 0,
+        "warnings": 14,
+        "total": 37
+      }
+    }
+  },
+  {
+    "id": "1780988247804",
+    "timestamp": "2026-06-09T06:57:47.614Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 19810,
+    "status": "WARNING",
+    "summary": {
+      "passed": 26,
+      "failed": 0,
+      "warnings": 12,
+      "total": 38
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 26,
+        "failed": 0,
+        "warnings": 12,
+        "total": 38
+      }
+    }
+  },
+  {
+    "id": "1780987944901",
+    "timestamp": "2026-06-09T06:52:46.615Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 21714,
+    "status": "WARNING",
+    "summary": {
+      "passed": 26,
+      "failed": 0,
+      "warnings": 12,
+      "total": 38
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 26,
+        "failed": 0,
+        "warnings": 12,
+        "total": 38
+      }
+    }
+  },
+  {
+    "id": "1780925957551",
+    "timestamp": "2026-06-08T13:39:30.464Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 12913,
+    "status": "WARNING",
+    "summary": {
+      "passed": 0,
+      "failed": 0,
+      "warnings": 14,
+      "total": 14
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 0,
+        "failed": 0,
+        "warnings": 14,
+        "total": 14
+      }
+    }
+  },
+  {
+    "id": "1780925595125",
+    "timestamp": "2026-06-08T13:33:34.321Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 19196,
+    "status": "WARNING",
+    "summary": {
+      "passed": 23,
+      "failed": 0,
+      "warnings": 17,
+      "total": 40
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 23,
+        "failed": 0,
+        "warnings": 17,
+        "total": 40
+      }
+    }
+  },
+  {
+    "id": "1780923936497",
+    "timestamp": "2026-06-08T13:06:02.456Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 25959,
+    "status": "PASS",
+    "summary": {
+      "passed": 0,
+      "failed": 0,
+      "warnings": 0,
+      "total": 0
+    },
+    "categoryBreakdown": {}
+  },
+  {
+    "id": "1780923547527",
+    "timestamp": "2026-06-08T12:59:26.076Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 18549,
+    "status": "WARNING",
+    "summary": {
+      "passed": 26,
+      "failed": 0,
+      "warnings": 14,
+      "total": 40
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 26,
+        "failed": 0,
+        "warnings": 14,
+        "total": 40
+      }
+    }
+  },
+  {
+    "id": "1780922350234",
+    "timestamp": "2026-06-08T12:39:32.776Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 7,
+    "durationMs": 22542,
+    "status": "WARNING",
+    "summary": {
+      "passed": 35,
+      "failed": 0,
+      "warnings": 21,
+      "total": 56
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 35,
+        "failed": 0,
+        "warnings": 21,
+        "total": 56
+      }
+    }
+  },
+  {
+    "id": "1780919980465",
+    "timestamp": "2026-06-08T12:00:15.112Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 9,
+    "durationMs": 34647,
+    "status": "WARNING",
+    "summary": {
+      "passed": 56,
+      "failed": 0,
+      "warnings": 16,
+      "total": 72
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 56,
+        "failed": 0,
+        "warnings": 16,
+        "total": 72
+      }
+    }
+  },
+  {
+    "id": "1780917578027",
+    "timestamp": "2026-06-08T11:20:15.890Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 20,
+    "durationMs": 37863,
+    "status": "WARNING",
+    "summary": {
+      "passed": 105,
+      "failed": 0,
+      "warnings": 55,
+      "total": 160
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 105,
+        "failed": 0,
+        "warnings": 55,
+        "total": 160
+      }
+    }
+  },
+  {
+    "id": "1780917172211",
+    "timestamp": "2026-06-08T11:13:23.656Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 10,
+    "durationMs": 31445,
+    "status": "WARNING",
+    "summary": {
+      "passed": 59,
+      "failed": 0,
+      "warnings": 21,
+      "total": 80
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 59,
+        "failed": 0,
+        "warnings": 21,
+        "total": 80
+      }
+    }
+  },
+  {
+    "id": "1780915121686",
+    "timestamp": "2026-06-08T10:39:03.519Z",
+    "lowerSitemap": "http://corpuat74.bajajhousingfinance.in:8080/",
+    "compareSitemap": "https://corpuat.bajajhousingfinance.in/",
+    "pagesChecked": 5,
+    "durationMs": 21833,
+    "status": "WARNING",
+    "summary": {
+      "passed": 23,
+      "failed": 0,
+      "warnings": 17,
+      "total": 40
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 23,
+        "failed": 0,
+        "warnings": 17,
+        "total": 40
+      }
+    }
+  },
+  {
+    "id": "1780911305644",
+    "timestamp": "2026-06-08T09:36:12.044Z",
+    "lowerSitemap": "https://test.bachmans.com/sitemap.xml",
+    "compareSitemap": "https://bachmans.com/sitemap.xml",
+    "pagesChecked": 2,
+    "durationMs": 66400,
+    "status": "FAIL",
+    "summary": {
+      "passed": 13,
+      "failed": 1,
+      "warnings": 0,
+      "total": 14
+    },
+    "categoryBreakdown": {
+      "ui": {
+        "passed": 13,
+        "failed": 1,
+        "warnings": 0,
+        "total": 14
+      }
+    }
+  }
+]

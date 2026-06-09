@@ -1,0 +1,569 @@
+{
+  "id": "1780911305644",
+  "timestamp": "2026-06-08T09:36:12.044Z",
+  "lowerSitemap": "https://test.bachmans.com/sitemap.xml",
+  "compareSitemap": "https://bachmans.com/sitemap.xml",
+  "pagesChecked": 2,
+  "durationMs": 66400,
+  "status": "FAIL",
+  "summary": {
+    "passed": 13,
+    "failed": 1,
+    "warnings": 0,
+    "total": 14
+  },
+  "categoryBreakdown": {
+    "ui": {
+      "passed": 13,
+      "failed": 1,
+      "warnings": 0,
+      "total": 14
+    }
+  },
+  "results": [
+    {
+      "pageUrl": "/home",
+      "category": "UI Testing",
+      "subTest": "Typography: Font Family",
+      "expectedValue": "Production: \"Proxima Nova\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+      "actualValue": "UAT: \"Proxima Nova\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:35:26.772Z"
+    },
+    {
+      "pageUrl": "/home",
+      "category": "UI Testing",
+      "subTest": "Typography: Heading Size",
+      "expectedValue": "Production: 24px",
+      "actualValue": "UAT: 24px",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:35:26.772Z"
+    },
+    {
+      "pageUrl": "/home",
+      "category": "UI Testing",
+      "subTest": "Typography: Font Weight",
+      "expectedValue": "Production: 700",
+      "actualValue": "UAT: 700",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:35:26.772Z"
+    },
+    {
+      "pageUrl": "/home",
+      "category": "UI Testing",
+      "subTest": "Colors: Text Color",
+      "expectedValue": "Production: rgba(0, 0, 0, 0.87)",
+      "actualValue": "UAT: rgba(0, 0, 0, 0.87)",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:35:26.772Z"
+    },
+    {
+      "pageUrl": "/home",
+      "category": "UI Testing",
+      "subTest": "Colors: Background Canvas Color",
+      "expectedValue": "Production: rgb(255, 255, 255)",
+      "actualValue": "UAT: rgb(255, 255, 255)",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:35:26.772Z"
+    },
+    {
+      "pageUrl": "/home",
+      "category": "UI Testing",
+      "subTest": "Buttons: Action Button Presence",
+      "expectedValue": "Button element present",
+      "actualValue": "No button element",
+      "differenceDescription": "Primary action button presence mismatch between Production and UAT",
+      "severity": "HIGH",
+      "status": "FAIL",
+      "timestamp": "2026-06-08T09:35:26.772Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Typography: Font Family",
+      "expectedValue": "Production: \"Proxima Nova\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+      "actualValue": "UAT: \"Proxima Nova\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\"",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Typography: Heading Size",
+      "expectedValue": "Production: 24px",
+      "actualValue": "UAT: 24px",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Typography: Font Weight",
+      "expectedValue": "Production: 700",
+      "actualValue": "UAT: 700",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Colors: Text Color",
+      "expectedValue": "Production: rgba(0, 0, 0, 0.87)",
+      "actualValue": "UAT: rgba(0, 0, 0, 0.87)",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Colors: Background Canvas Color",
+      "expectedValue": "Production: rgb(255, 255, 255)",
+      "actualValue": "UAT: rgb(255, 255, 255)",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Buttons: Background Color",
+      "expectedValue": "Production: rgb(146, 98, 184)",
+      "actualValue": "UAT: rgb(146, 98, 184)",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Buttons: Text Color",
+      "expectedValue": "Production: rgb(255, 255, 255)",
+      "actualValue": "UAT: rgb(255, 255, 255)",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    },
+    {
+      "pageUrl": "/store-locator",
+      "category": "UI Testing",
+      "subTest": "Buttons: Corner Border Radius",
+      "expectedValue": "Production: 0px",
+      "actualValue": "UAT: 0px",
+      "differenceDescription": "Styles match Production",
+      "severity": "LOW",
+      "status": "PASS",
+      "timestamp": "2026-06-08T09:36:11.892Z"
+    }
+  ],
+  "logs": {
+    "execution": [
+      "[2026-06-08T09:35:05.648Z] Starting validation job #1780911305644",
+      "[2026-06-08T09:35:05.648Z] Run mode: sitemap",
+      "[2026-06-08T09:35:05.649Z] Selected categories: [\"ui\"]",
+      "[2026-06-08T09:35:05.649Z] Lower environment sitemap: https://test.bachmans.com/sitemap.xml",
+      "[2026-06-08T09:35:05.649Z] Compare environment sitemap: https://bachmans.com/sitemap.xml",
+      "[2026-06-08T09:35:05.649Z] Fetching UAT (lower) sitemap...",
+      "[2026-06-08T09:35:10.812Z] Fetching Production (compare) sitemap...",
+      "[2026-06-08T09:35:13.967Z] Sitemap crawl result: Matches = 792, UAT-Only = 1438, Prod-Only = 1363",
+      "[2026-06-08T09:35:13.967Z] Limiting check to first 2 URLs.",
+      "[2026-06-08T09:35:13.968Z] Launching Playwright Chromium browser instances...",
+      "[2026-06-08T09:35:15.034Z] Validating page [1/2]: /home",
+      "[2026-06-08T09:35:15.035Z] Navigating UAT: https://test.bachmans.com/home",
+      "[2026-06-08T09:35:16.944Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=5&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v812500068za200zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938465~115938468~118228214~119027222&apve=1&apvf=f&apvc=1&tft=1780911316747&tfd=1709 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.341Z] [Network Request Failed] https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829z8812500068za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&_s=1&tag_exp=0~115616985~115938465~115938469~118228215~119027224&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&en=page_view&_fv=1&_nsi=1&_ss=1&ep.page_path1=home&tfd=2103 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.743Z] [Network Request Failed] https://www.google.com/rmkt/collect/16792742049/?random=1780911317464&cv=11&fst=1780911317464&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=11&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.790Z] [Network Request Failed] https://www.google.com/rmkt/collect/16792742049/?random=1780911317579&cv=11&fst=1780911317579&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=11&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.791Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=11&frm=0&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911317617&tfd=2579 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.791Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=11&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&_tu=CA&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911317619&tfd=2580 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.792Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911316110&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGAC&are=1&cid=674544375.1780911317&ec_mode=a&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&en=page_view&_fv=1&_ss=1&tfd=2530 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.794Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&_s=2&tfd=2616 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:17.995Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AEAAAGQC&ae=a&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=3&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&en=scroll&epn.percent_scrolled=90&_et=33&tfd=2717 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:18.219Z] [Network Request Failed] https://www.google.com/rmkt/collect/722884644/?random=1780911317932&cv=11&fst=1780911317932&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=10&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:18.220Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=10&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&_tu=CA&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&apve=1&apvf=f&apvc=0&tids=AW-722884644&tid=AW-722884644&tft=1780911317988&tfd=2950 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:18.445Z] [Network Request Failed] https://www.google.com/rmkt/collect/11523330625/?random=1780911318153&cv=11&fst=1780911318153&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=15&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:18.445Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=15&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&_tu=CA&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027224&apve=1&apvf=f&apvc=0&tids=AW-11523330625&tid=AW-11523330625&tft=1780911318208&tfd=3170 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:19.267Z] Navigating Prod: https://bachmans.com/home",
+      "[2026-06-08T09:35:20.067Z] [Network Request Failed] https://sync.intentiq.com/profiles_engine/ProfilesEngineServlet?at=20&dpi=2124307461&pcid=AC5984F0FCEF42B886EA1DF3FD7812D6 - net::ERR_BLOCKED_BY_ORB",
+      "[2026-06-08T09:35:20.593Z] [Browser Console Error] Failed to load resource: the server responded with a status of 404 ()",
+      "[2026-06-08T09:35:21.106Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-PRKK7V0MQM&gtm=45je6631v9135686382za20g&_p=1780911316110&_gaz=1&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=ABAIAGAC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115938465~115938469~118228214~119027224&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dp=%2Fhome&dt=Bachmans%20Test&sid=1780911321&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=5979 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:22.362Z] [Network Request Failed] https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&_s=2&tag_exp=0~115616985~115938465~115938469~118228215~119027224&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&_tu=CA&en=scroll&ep.page_path1=home&epn.percent_scrolled=90&_et=14&tfd=7120 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:22.856Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Bachmans%20Test&_s=4&tfd=7722 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:26.752Z] Executing UI Comparative Style Testing...",
+      "[2026-06-08T09:35:26.772Z] Validating page [2/2]: /store-locator",
+      "[2026-06-08T09:35:26.772Z] Navigating UAT: https://test.bachmans.com/store-locator",
+      "[2026-06-08T09:35:27.070Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=5&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Not%20found&_tu=wAQ&en=user_engagement&_et=7436&tfd=12015 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:27.070Z] [Network Request Failed] https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&_s=3&tag_exp=0~115616985~115938465~115938469~118228215~119027224&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Not%20found&_tu=wAQ&en=user_engagement&ep.page_path1=home&_et=9878&tfd=12006 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:27.071Z] [Network Request Failed] https://bat.bing.com/actionp/0?ti=12102600&Ver=2&mid=31176222-f751-4349-88f4-5ec2b50acaf2&bo=2&sid=5cec6f60631d11f1bc7721ffd897b5ae&vid=5cec9950631d11f1b8d7f50780d23da3&vids=1&msclkid=N&evt=pageHide - net::ERR_ABORTED",
+      "[2026-06-08T09:35:27.071Z] [Network Request Failed] https://f.clarity.ms/collect - net::ERR_ABORTED",
+      "[2026-06-08T09:35:27.926Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=6&frm=0&ae=g&auid=634529545.1780911317&dt=Bachmans%20Test&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v812500068za200zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780911327678&tfd=903 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:27.998Z] [Browser Console Error] Failed to load resource: the server responded with a status of 404 ()",
+      "[2026-06-08T09:35:28.417Z] [Network Request Failed] https://www.google.com/rmkt/collect/16792742049/?random=1780911328263&cv=11&fst=1780911328263&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=10&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:28.417Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911327081&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&ec_mode=a&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938468~118228214~119027224&sid=1780911317&sct=1&seg=1&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&en=page_view&tfd=1547 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:28.508Z] [Network Request Failed] https://www.google.com/rmkt/collect/16792742049/?random=1780911328327&cv=11&fst=1780911328327&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=10&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:28.510Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=10&frm=0&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911328366&tfd=1591 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:28.511Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=10&frm=0&ae=g&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&_tu=CA&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911328367&tfd=1591 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:29.100Z] [Network Request Failed] https://www.google.com/rmkt/collect/722884644/?random=1780911328969&cv=11&fst=1780911328969&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118228214~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=15&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:29.101Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=15&frm=0&ae=g&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&_tu=CA&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118228214~119027224&apve=1&apvf=f&apvc=0&tids=AW-722884644&tid=AW-722884644&tft=1780911328986&tfd=2210 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:29.158Z] [Network Request Failed] https://www.google.com/rmkt/collect/11523330625/?random=1780911329039&cv=11&fst=1780911329039&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938469~118228215~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=17&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:29.165Z] [Network Request Failed] https://www.google.com/ccm/collect?rcb=17&frm=0&ae=g&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&_tu=CA&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938469~118228215~119027224&apve=1&apvf=f&apvc=0&tids=AW-11523330625&tid=AW-11523330625&tft=1780911329061&tfd=2286 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:33.526Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911327081&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&tag_exp=0~115616985~115938466~115938468~118228214~119027224&sid=1780911317&sct=1&seg=1&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&_s=2&tfd=6597 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:33.565Z] [Network Request Failed] https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829z8812500068za20gzb812500068zd812500068&_p=1780911327081&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&tag_exp=0~115938466~115938468~118228214~119027222&sid=1780911317&sct=1&seg=1&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&_s=1&tfd=6701 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:34.541Z] [Network Request Failed] https://analytics.google.com/g/collect?v=2&tid=G-PRKK7V0MQM&gtm=45je6631v9135686382za20g&_p=1780911327081&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=ABAIAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616986~115938466~115938469~118228214~119027222~119349417&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dp=%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&sid=1780911321&sct=1&seg=1&_tu=yAQ&en=page_view&_ee=1&tfd=7666 - net::ERR_ABORTED",
+      "[2026-06-08T09:35:46.867Z] Navigating Prod: https://bachmans.com/store-locator",
+      "[2026-06-08T09:36:11.875Z] Failed to navigate Prod page https://bachmans.com/store-locator: page.goto: Timeout 25000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://bachmans.com/store-locator\", waiting until \"load\"\u001b[22m\n",
+      "[2026-06-08T09:36:11.876Z] Executing UI Comparative Style Testing...",
+      "[2026-06-08T09:36:12.043Z] Compiling final validation summary metrics...",
+      "[2026-06-08T09:36:12.044Z] Saving report database entries..."
+    ],
+    "browser": [
+      {
+        "timestamp": "2026-06-08T09:35:17.319Z",
+        "type": "warning",
+        "text": "[Meta Pixel] - You are sending a non-standard event 'scroll'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+        "url": "https://test.bachmans.com/home"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:19.073Z",
+        "type": "warning",
+        "text": "[Meta Pixel] - Duplicate Pixel ID: 1087043689405877.",
+        "url": "https://test.bachmans.com/home"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:19.091Z",
+        "type": "warning",
+        "text": "[Meta Pixel] - You are sending a non-standard event 'nextroll-ready'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+        "url": "https://test.bachmans.com/home"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:19.343Z",
+        "type": "log",
+        "text": "THIS IS RESP : {metadata: Object, sys: Object, fields: Object}",
+        "url": "https://test.bachmans.com/home"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:19.574Z",
+        "type": "warning",
+        "text": "[Meta Pixel] - You are sending a non-standard event 'nextroll-consent'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+        "url": "https://test.bachmans.com/home"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:19.859Z",
+        "type": "warning",
+        "text": "[react-ga] ReactGA.initialize must be called first or GoogleAnalytics should be loaded manually",
+        "url": "https://test.bachmans.com/home"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:20.593Z",
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "url": "https://test.bachmans.com/home"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.374Z",
+        "type": "warning",
+        "text": "[react-ga] ReactGA.initialize must be called first or GoogleAnalytics should be loaded manually",
+        "url": "https://test.bachmans.com/store-locator"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.872Z",
+        "type": "log",
+        "text": "THIS IS RESP : {metadata: Object, sys: Object, fields: Object}",
+        "url": "https://test.bachmans.com/store-locator"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.998Z",
+        "type": "error",
+        "text": "Failed to load resource: the server responded with a status of 404 ()",
+        "url": "https://test.bachmans.com/store-locator"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.706Z",
+        "type": "warning",
+        "text": "Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading",
+        "url": "https://test.bachmans.com/store-locator"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.749Z",
+        "type": "warning",
+        "text": "[Meta Pixel] - Duplicate Pixel ID: 1087043689405877.",
+        "url": "https://test.bachmans.com/store-locator"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.749Z",
+        "type": "warning",
+        "text": "[Meta Pixel] - You are sending a non-standard event 'nextroll-ready'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+        "url": "https://test.bachmans.com/store-locator"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.786Z",
+        "type": "warning",
+        "text": "[Meta Pixel] - You are sending a non-standard event 'nextroll-consent'. The preferred way to send these events is using trackCustom. See 'https://developers.facebook.com/docs/ads-for-websites/pixel-events/#events' for more information.",
+        "url": "https://test.bachmans.com/store-locator"
+      }
+    ],
+    "network": [
+      {
+        "timestamp": "2026-06-08T09:35:16.944Z",
+        "url": "https://www.google.com/ccm/collect?rcb=5&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v812500068za200zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938465~115938468~118228214~119027222&apve=1&apvf=f&apvc=1&tft=1780911316747&tfd=1709",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.341Z",
+        "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829z8812500068za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&_s=1&tag_exp=0~115616985~115938465~115938469~118228215~119027224&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&en=page_view&_fv=1&_nsi=1&_ss=1&ep.page_path1=home&tfd=2103",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.743Z",
+        "url": "https://www.google.com/rmkt/collect/16792742049/?random=1780911317464&cv=11&fst=1780911317464&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=11&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.790Z",
+        "url": "https://www.google.com/rmkt/collect/16792742049/?random=1780911317579&cv=11&fst=1780911317579&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=11&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.790Z",
+        "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911317617&tfd=2579",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.791Z",
+        "url": "https://www.google.com/ccm/collect?rcb=11&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&_tu=CA&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911317619&tfd=2580",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.792Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911316110&_gaz=1&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGAC&are=1&cid=674544375.1780911317&ec_mode=a&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&en=page_view&_fv=1&_ss=1&tfd=2530",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.794Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&_s=2&tfd=2616",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:17.995Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AEAAAGQC&ae=a&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=3&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&en=scroll&epn.percent_scrolled=90&_et=33&tfd=2717",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:18.219Z",
+        "url": "https://www.google.com/rmkt/collect/722884644/?random=1780911317932&cv=11&fst=1780911317932&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=10&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:18.220Z",
+        "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&_tu=CA&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027222&apve=1&apvf=f&apvc=0&tids=AW-722884644&tid=AW-722884644&tft=1780911317988&tfd=2950",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:18.445Z",
+        "url": "https://www.google.com/rmkt/collect/11523330625/?random=1780911318153&cv=11&fst=1780911318153&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fhome&rcb=15&frm=0&tiba=Welcome%20to%20Bachmans.com&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:18.445Z",
+        "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&ae=g&auid=634529545.1780911317&dt=Welcome%20to%20Bachmans.com&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&scrsrc=www.googletagmanager.com&rnd=1844570333.1780911317&navt=n&npa=0&_tu=CA&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938465~115938468~118228215~119027224&apve=1&apvf=f&apvc=0&tids=AW-11523330625&tid=AW-11523330625&tft=1780911318208&tfd=3170",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:20.067Z",
+        "url": "https://sync.intentiq.com/profiles_engine/ProfilesEngineServlet?at=20&dpi=2124307461&pcid=AC5984F0FCEF42B886EA1DF3FD7812D6",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_BLOCKED_BY_ORB"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:21.106Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-PRKK7V0MQM&gtm=45je6631v9135686382za20g&_p=1780911316110&_gaz=1&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=ABAIAGAC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=3&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115938465~115938469~118228214~119027224&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dp=%2Fhome&dt=Bachmans%20Test&sid=1780911321&sct=1&seg=0&_tu=yAQ&en=page_view&_fv=1&_ss=1&_ee=1&tfd=5979",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:22.362Z",
+        "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AEAAAAQ&ae=a&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&_s=2&tag_exp=0~115616985~115938465~115938469~118228215~119027224&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Welcome%20to%20Bachmans.com&_tu=CA&en=scroll&ep.page_path1=home&epn.percent_scrolled=90&_et=14&tfd=7120",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:22.856Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Bachmans%20Test&_s=4&tfd=7722",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.070Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=11&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=5&tag_exp=0~115938465~115938468~118228215~119027222&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Not%20found&_tu=wAQ&en=user_engagement&_et=7436&tfd=12015",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.070Z",
+        "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829za20gzb812500068zd812500068&_p=1780911316110&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&_s=3&tag_exp=0~115616985~115938465~115938469~118228215~119027224&sid=1780911317&sct=1&seg=0&dl=https%3A%2F%2Ftest.bachmans.com%2Fhome&dt=Not%20found&_tu=wAQ&en=user_engagement&ep.page_path1=home&_et=9878&tfd=12006",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.071Z",
+        "url": "https://bat.bing.com/actionp/0?ti=12102600&Ver=2&mid=31176222-f751-4349-88f4-5ec2b50acaf2&bo=2&sid=5cec6f60631d11f1bc7721ffd897b5ae&vid=5cec9950631d11f1b8d7f50780d23da3&vids=1&msclkid=N&evt=pageHide",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.071Z",
+        "url": "https://f.clarity.ms/collect",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:27.926Z",
+        "url": "https://www.google.com/ccm/collect?rcb=6&frm=0&ae=g&auid=634529545.1780911317&dt=Bachmans%20Test&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&ep.ads_data_redaction=0&gtm=45He6631v812500068za200zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616986~115938466~115938469~118228214~119027224&apve=1&apvf=f&apvc=1&tft=1780911327678&tfd=903",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:28.417Z",
+        "url": "https://www.google.com/rmkt/collect/16792742049/?random=1780911328263&cv=11&fst=1780911328263&fmt=8&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=10&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&data=event%3Dgtag.config&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:28.417Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911327081&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&ec_mode=a&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616985~115938466~115938468~118228214~119027224&sid=1780911317&sct=1&seg=1&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&en=page_view&tfd=1547",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:28.508Z",
+        "url": "https://www.google.com/rmkt/collect/16792742049/?random=1780911328327&cv=11&fst=1780911328327&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=10&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:28.510Z",
+        "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&en=page_view&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911328366&tfd=1591",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:28.511Z",
+        "url": "https://www.google.com/ccm/collect?rcb=10&frm=0&ae=g&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&_tu=CA&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938468~118228214~119027224&apve=1&apvf=f&apvc=0&tids=AW-16792742049&tid=AW-16792742049&tft=1780911328367&tfd=1591",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.100Z",
+        "url": "https://www.google.com/rmkt/collect/722884644/?random=1780911328969&cv=11&fst=1780911328969&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118228214~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=15&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.101Z",
+        "url": "https://www.google.com/ccm/collect?rcb=15&frm=0&ae=g&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&_tu=CA&gtm=45be6631z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115938466~115938469~118228214~119027224&apve=1&apvf=f&apvc=0&tids=AW-722884644&tid=AW-722884644&tft=1780911328986&tfd=2210",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.158Z",
+        "url": "https://www.google.com/rmkt/collect/11523330625/?random=1780911329039&cv=11&fst=1780911329039&fmt=8&bg=ffffff&guid=ON&async=1&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938469~118228215~119027224&u_w=1280&u_h=720&url=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&rcb=17&frm=0&tiba=The%20Main%20Locator%20of%20The%20Stores&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=634529545.1780911317&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&_tu=CA&ept=68&gcp=5",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:29.165Z",
+        "url": "https://www.google.com/ccm/collect?rcb=17&frm=0&ae=g&auid=634529545.1780911317&dt=The%20Main%20Locator%20of%20The%20Stores&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&scrsrc=www.googletagmanager.com&rnd=89714768.1780911328&navt=n&npa=0&_tu=CA&gtm=45be6631v9212811140z8812500068za20gzb812500068zd812500068xea&gcd=13l3l3l3l1l1&dma=0&tag_exp=0~115616985~115938466~115938469~118228215~119027224&apve=1&apvf=f&apvc=0&tids=AW-11523330625&tid=AW-11523330625&tft=1780911329061&tfd=2286",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:33.526Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-MVBRQ0WXY8&gtm=45je6631v9200732291z8812500068za20gzb812500068zd812500068&_p=1780911327081&gcd=13l3l3l3l1l1&npa=0&dma=0&ecid=161866105&_eu=AAAAAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&tag_exp=0~115616985~115938466~115938468~118228214~119027224&sid=1780911317&sct=1&seg=1&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&_s=2&tfd=6597",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:33.565Z",
+        "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-NP9MSNKXS9&gtm=45je6631v9132350829z8812500068za20gzb812500068zd812500068&_p=1780911327081&gcd=13l3l3l3l1l1&npa=0&dma=0&_eu=AAAAAAQ&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=10&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&tag_exp=0~115938466~115938468~118228214~119027222&sid=1780911317&sct=1&seg=1&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&_s=1&tfd=6701",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      },
+      {
+        "timestamp": "2026-06-08T09:35:34.541Z",
+        "url": "https://analytics.google.com/g/collect?v=2&tid=G-PRKK7V0MQM&gtm=45je6631v9135686382za20g&_p=1780911327081&gcd=13l3l3l3l2l1&npa=0&dma=0&_eu=ABAIAGQC&are=1&cid=674544375.1780911317&frm=0&pscdl=noapi&rcb=2&sr=1280x720&uaa=x86&uab=64&uafvl=Chromium%3B148.0.7778.96%7CHeadlessChrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0&uam=&uamb=0&uap=Windows&uapv=19.0.0&uaw=0&ul=en-gb&gaf=2&_s=1&tag_exp=0~115616986~115938466~115938469~118228214~119027222~119349417&dl=https%3A%2F%2Ftest.bachmans.com%2Fstore-locator&dp=%2Fstore-locator&dt=The%20Main%20Locator%20of%20The%20Stores&sid=1780911321&sct=1&seg=1&_tu=yAQ&en=page_view&_ee=1&tfd=7666",
+        "status": 0,
+        "statusText": "Failed",
+        "error": "net::ERR_ABORTED"
+      }
+    ],
+    "error": [
+      "Navigation failed for Prod: https://bachmans.com/store-locator - page.goto: Timeout 25000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://bachmans.com/store-locator\", waiting until \"load\"\u001b[22m\n"
+    ]
+  }
+}
