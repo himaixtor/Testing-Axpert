@@ -92,6 +92,12 @@ export default function DashboardPage() {
   const [activeAvailableSelected, setActiveAvailableSelected] = useState<string[]>([]);
   const [activeSelectedSelected, setActiveSelectedSelected] = useState<string[]>([]);
 
+  // Screen size selection
+  const [testDesktop, setTestDesktop] = useState(true);
+  const [testTablet, setTestTablet] = useState(true);
+  const [testMobile, setTestMobile] = useState(true);
+  const [hiddenComponentOption, setHiddenComponentOption] = useState<'avoid' | 'with'>('avoid');
+
   // Execution states
   const [isRunning, setIsRunning] = useState(false);
   const [runProgress, setRunProgress] = useState(0);
@@ -281,6 +287,10 @@ export default function DashboardPage() {
         formData.append('limitedPages', String(limitedPages));
         formData.append('pagesCount', pagesCount);
         formData.append('selectedCategoryIds', JSON.stringify(selectedCategories.map(c => c.id)));
+        formData.append('testDesktop', String(testDesktop));
+        formData.append('testTablet', String(testTablet));
+        formData.append('testMobile', String(testMobile));
+        formData.append('hiddenComponentOption', hiddenComponentOption);
 
         const res = await fetch('/api/validation/start', {
           method: 'POST',
@@ -303,7 +313,11 @@ export default function DashboardPage() {
             compareWebpage,
             limitedPages,
             pagesCount,
-            selectedCategoryIds: selectedCategories.map(c => c.id)
+            selectedCategoryIds: selectedCategories.map(c => c.id),
+            testDesktop,
+            testTablet,
+            testMobile,
+            hiddenComponentOption
           })
         });
 
@@ -542,6 +556,76 @@ export default function DashboardPage() {
             )}
 
             <div>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '8px', fontWeight: 600 }}>
+                🖥️ Test Screen Sizes
+              </label>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.85rem' }}>
+                  <input
+                    type="checkbox"
+                    checked={testDesktop}
+                    onChange={e => setTestDesktop(e.target.checked)}
+                    disabled={isRunning}
+                    style={{ accentColor: 'var(--accent-primary)' }}
+                  />
+                  <span>📱 Desktop (1440px)</span>
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.85rem' }}>
+                  <input
+                    type="checkbox"
+                    checked={testTablet}
+                    onChange={e => setTestTablet(e.target.checked)}
+                    disabled={isRunning}
+                    style={{ accentColor: 'var(--accent-primary)' }}
+                  />
+                  <span>📑 Tablet (768px)</span>
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer', fontSize: '0.85rem' }}>
+                  <input
+                    type="checkbox"
+                    checked={testMobile}
+                    onChange={e => setTestMobile(e.target.checked)}
+                    disabled={isRunning}
+                    style={{ accentColor: 'var(--accent-primary)' }}
+                  />
+                  <span>📱 Mobile (375px)</span>
+                </label>
+              </div>
+            </div>
+
+            <div>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '8px', fontWeight: 600 }}>
+                🎯 Component Visibility
+              </label>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', cursor: 'pointer' }}>
+                  <input
+                    type="radio"
+                    name="hidden-comp"
+                    value="avoid"
+                    checked={hiddenComponentOption === 'avoid'}
+                    onChange={() => setHiddenComponentOption('avoid')}
+                    disabled={isRunning}
+                    style={{ accentColor: 'var(--accent-primary)' }}
+                  />
+                  Avoid Hidden Components
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', cursor: 'pointer' }}>
+                  <input
+                    type="radio"
+                    name="hidden-comp"
+                    value="with"
+                    checked={hiddenComponentOption === 'with'}
+                    onChange={() => setHiddenComponentOption('with')}
+                    disabled={isRunning}
+                    style={{ accentColor: 'var(--accent-primary)' }}
+                  />
+                  With Hidden Components
+                </label>
+              </div>
+            </div>
+
+            <div>
               <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '8px' }}>
                 Export Result Format
               </label>
@@ -603,8 +687,8 @@ export default function DashboardPage() {
                   className="history-item"
                 >
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '4px' }}>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
-                      {new Date(Number(item.id)).toLocaleTimeString()}
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', fontWeight: 600 }}>
+                      {new Date(Number(item.id)).toLocaleDateString()} {new Date(Number(item.id)).toLocaleTimeString()}
                     </span>
                     <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                       {getStatusIcon(item.status)}

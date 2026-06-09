@@ -15,6 +15,9 @@ export interface TestResult {
   elementId?: string;        // HTML element ID if available
   elementClass?: string;     // HTML element class if available
   elementTag?: string;       // HTML tag name (e.g., 'div', 'button', 'span')
+  viewportName?: string;     // Viewport name (Desktop, Tablet, Mobile)
+  viewportWidth?: number;    // Viewport width in pixels
+  screenshotUrl?: string;    // Path to screenshot of the element with difference
 }
 
 export interface BrowserLog {
