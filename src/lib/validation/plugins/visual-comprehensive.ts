@@ -75,10 +75,14 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
   private async extractAllStyles(page: any, includeHidden: boolean = false): Promise<ElementStyle[]> {
     try {
       const styles = await page.evaluate((includeHidden: boolean) => {
-        // Common components to skip (headers, footers, sticky bars, etc.)
+        // DEBUG: Log DOM stats
+        console.log(`[EXTRACT] DOM Ready - Total elements: ${document.querySelectorAll('*').length}`);
+
+        // Components to potentially skip (but only if identical across pages)
+        // These will be compared on first page, then deduplicated
         const commonComponentSelectors = [
           'header', 'footer', 'nav', '.navbar', '.header', '.footer',
-          '.sticky', '.fixed-top', '.fixed-bottom', '.modal-backdrop',
+          '.sticky', '.fixed-top', '.fixed-bottom',
           '[role="navigation"]', '[role="banner"]', '[role="contentinfo"]',
           '.skip-link', '.breadcrumb', '.pagination', '.sidebar',
           '.sidenav', '.hamburger', '.menu', '.topbar', '.bottom-bar',
@@ -100,44 +104,64 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
         // Helper function to check if element is truly hidden
         const isElementHidden = (el: any): boolean => {
           const computed = window.getComputedStyle(el);
-          const classList = (el.className || '').toLowerCase();
+          // Handle className which could be string or DOMTokenList
+          const classNameStr = typeof el.className === 'string' ? el.className : (el.className ? String(el.className) : '');
+          const classList = (classNameStr || '').toLowerCase();
 
-          // Direct display/visibility/opacity checks
+          // ✅ EXPLICIT hiding indicators
+
+          // 1. Direct display:none
           if (computed.display === 'none') return true;
+
+          // 2. Direct visibility:hidden
           if (computed.visibility === 'hidden') return true;
+
+          // 3. Complete opacity 0
           if (computed.opacity === '0') return true;
 
-          // Check for aria-hidden attribute
+          // 4. aria-hidden attribute
           if (el.getAttribute('aria-hidden') === 'true') return true;
 
-          // Check for specific hidden class names
-          const hiddenClasses = ['sr-only', 'hide-accessible', 'navbar-toggler-icon', 'visually-hidden', 'screen-reader-only', 'sr-only-focusable', 'hidden-', 'hide-text'];
+          // 5. Specific hidden class names (sr-only, accessibility helpers, etc.)
+          const hiddenClasses = ['sr-only', 'hide-accessible', 'navbar-toggler-icon', 'visually-hidden', 'screen-reader-only', 'aria-hidden', 'hidden', 'invisible'];
           if (hiddenClasses.some(cls => classList.includes(cls))) {
             return true;
           }
 
-          // Check for text-indent: -9999px
+          // 6. Text indent (for sr-only text hiding)
           const textIndent = parseInt(computed.textIndent);
-          if (textIndent < -1000) return true;
+          if (!isNaN(textIndent) && textIndent < -1000) return true;
 
-          // Check for clip/clip-path
-          if (computed.clip && computed.clip !== 'auto' && computed.clip.includes('0,0,0,0')) return true;
-          if (computed.clipPath && computed.clipPath !== 'none') {
-            if (computed.clipPath.includes('polygon(0') || computed.clipPath === 'inset(0)') return true;
+          // 7. Clip rect (sr-only technique)
+          if (computed.clip && computed.clip !== 'auto' && computed.clip !== 'rect(auto)') {
+            if (computed.clip.includes('0,0,0,0') || computed.clip === 'rect(0, 0, 0, 0)') return true;
           }
 
-          // Check for off-screen positioning
-          if (computed.position === 'absolute') {
-            const left = computed.left;
-            const top = computed.top;
-            if (left !== 'auto' && parseInt(left) < -100) return true;
-            if (top !== 'auto' && parseInt(top) < -100) return true;
-          }
-
-          // Check for zero dimensions
+          // ✅ VIEWPORT VISIBILITY: Check if element is outside the visible viewport
           const rect = el.getBoundingClientRect();
-          if (rect.width === 0 && rect.height === 0) {
-            return true;
+          const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+          const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+
+          // Element is completely below the viewport
+          if (rect.top >= viewportHeight) return true;
+
+          // Element is completely above the viewport
+          if (rect.bottom <= 0) return true;
+
+          // Element is completely to the right of viewport
+          if (rect.left >= viewportWidth) return true;
+
+          // Element is completely to the left of viewport
+          if (rect.right <= 0) return true;
+
+          // Element has zero dimensions (no visible area)
+          if (rect.width === 0 || rect.height === 0) return true;
+
+          // Element is positioned absolutely off-screen (common for hidden overlays)
+          if (computed.position === 'fixed' || computed.position === 'sticky') {
+            // Don't hide sticky/fixed elements as they're part of the viewport
+            // BUT skip if they're positioned completely off-screen
+            if (rect.top < -viewportHeight || rect.bottom > viewportHeight * 2) return true;
           }
 
           return false;
@@ -178,11 +202,11 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
         for (let i = 0; i < allElements.length; i++) {
           const el = allElements[i];
 
-          // Skip non-visual elements
-          if (['SCRIPT', 'STYLE', 'META', 'LINK', 'NOSCRIPT'].includes(el.tagName)) continue;
+          // Skip non-visual elements (but KEEP BODY - content is inside!)
+          if (['SCRIPT', 'STYLE', 'META', 'LINK', 'NOSCRIPT', 'HTML', 'HEAD'].includes(el.tagName)) continue;
 
-          // Skip common components
-          if (isCommonComponent(el)) continue;
+          // NOTE: Don't skip common components here - check them on first page
+          // Deduplication happens in compareAndGenerateResults
 
           // Get computed styles ONCE per element
           const computed = window.getComputedStyle(el);
@@ -199,7 +223,7 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
               selector: getSelector(el),
               tag: el.tagName.toLowerCase(),
               id: el.id || '',
-              classes: el.className || '',
+              classes: typeof el.className === 'string' ? el.className : (el.className ? String(el.className) : ''),
               styles: {
                 // Typography
                 fontFamily: computed.fontFamily,
@@ -295,6 +319,7 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
           }
         }
 
+        console.log(`[EXTRACT] Final extracted elements: ${elements.length}, includeHidden: ${includeHidden}`);
         return elements;
       }, includeHidden);
 
@@ -385,7 +410,9 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
     viewportName: string,
     viewportWidth: number,
     lowerPage: any,
-    logExecution: (msg: string) => void
+    logExecution: (msg: string) => void,
+    checkLevel: 'highlevel' | 'micro' = 'micro',
+    seenElementSignatures: Map<string, boolean> = new Map()
   ): Promise<TestResult[]> {
     const results: TestResult[] = [];
 
@@ -394,7 +421,9 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
     const prodMap = new Map(prodElements.map(el => [el.selector, el]));
 
     // Get all unique selectors
-    const allSelectors = new Set([...lowerMap.keys(), ...prodMap.keys()]);
+    const allSelectors = new Set([...Array.from(lowerMap.keys()), ...Array.from(prodMap.keys())]);
+
+    logExecution(`  DEBUG: Comparing ${allSelectors.size} selectors for ${relativeUrl}`);
 
     // Track components with differences per selector (for deduplication)
     const componentDifferences: Map<string, boolean> = new Map();
@@ -451,25 +480,58 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
           logExecution
         );
 
-        // Generate test result for this difference
-        results.push({
-          pageUrl: relativeUrl,
-          category: this.name,
-          subTest: `${this.getCategory(prop)}: ${this.formatName(prop)}`,
-          expectedValue: prodVal,
-          actualValue: lowerVal,
-          differenceDescription: `${this.formatName(prop)} mismatch - Production: ${prodVal}, UAT: ${lowerVal}`,
-          severity: this.getSeverity(prop),
-          status: 'WARNING',
-          elementSelector: selector,
-          elementId: lowerEl.id,
-          elementClass: lowerEl.classes,
-          elementTag: lowerEl.tag,
-          viewportName: viewportName,
-          viewportWidth: viewportWidth,
-          screenshotUrl: screenshotUrl || undefined,
-          timestamp: new Date().toISOString()
-        });
+        // Filter based on check level
+        const severity = this.getSeverity(prop);
+        const isHighLevel = checkLevel === 'highlevel';
+        const shouldInclude = !isHighLevel || ['CRITICAL', 'HIGH'].includes(severity);
+
+        if (shouldInclude) {
+          // Skip reporting if selector is just "body"
+          if (selector.toLowerCase() === 'body') {
+            continue;
+          }
+
+          // Deduplication: Skip if we've already reported this element-property
+          // (means it's identical header/footer/nav across all pages)
+          const signature = `${selector}::${prop}`;
+          if (seenElementSignatures.has(signature)) {
+            continue;
+          }
+          seenElementSignatures.set(signature, true);
+
+          // Generate filename for screenshot
+          const sanitizedSelector = selector.replace(/[^a-zA-Z0-9-_]/g, '_').substring(0, 50);
+          const timestamp = Date.now();
+          const screenshotFilename = `${sanitizedSelector}_${viewportName.replace(/[^\w]/g, '_')}_${timestamp}.png`;
+
+          // Capture screenshot of the element with difference
+          const screenshotUrl = await this.captureElementScreenshot(
+            lowerPage,
+            selector,
+            screenshotFilename,
+            logExecution
+          );
+
+          // Generate test result for this difference
+          results.push({
+            pageUrl: relativeUrl,
+            category: this.name,
+            subTest: `${this.getCategory(prop)}: ${this.formatName(prop)}`,
+            expectedValue: prodVal,
+            actualValue: lowerVal,
+            differenceDescription: `${this.formatName(prop)} mismatch - Production: ${prodVal}, UAT: ${lowerVal}`,
+            severity: severity,
+            status: 'WARNING',
+            elementSelector: selector,
+            elementId: lowerEl.id,
+            elementClass: lowerEl.classes,
+            elementTag: lowerEl.tag,
+            viewportName: viewportName,
+            viewportWidth: viewportWidth,
+            screenshotUrl: screenshotUrl || undefined,
+            timestamp: new Date().toISOString()
+          });
+        }
       }
 
       // Track if this component has differences
@@ -508,6 +570,7 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
     const testMobile = (context as any).testMobile !== false;
     const hiddenComponentOption = (context as any).hiddenComponentOption || 'avoid';
     const includeHidden = hiddenComponentOption === 'with';
+    const checkLevel = (context as any).checkLevel || 'micro';
 
     const viewports = this.getActiveViewports(testDesktop, testTablet, testMobile);
 
@@ -517,6 +580,7 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
     logExecution('╚════════════════════════════════════════╝');
 
     const allResults: TestResult[] = [];
+    const seenElementSignatures = new Map<string, boolean>(); // Track elements we've already reported
 
     try {
       for (const viewport of viewports) {
@@ -528,10 +592,16 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
         logExecution(`  📊 Phase 1: Extracting styles from Lower Environment...`);
         const lowerStyles = await this.extractAllStyles(lowerPage, includeHidden);
         logExecution(`  ✓ Extracted ${lowerStyles.length} elements from UAT`);
+        if (lowerStyles.length > 0) {
+          logExecution(`    Sample elements: ${lowerStyles.slice(0, 3).map(e => e.selector).join(', ')}`);
+        }
 
         logExecution(`  📊 Phase 2: Extracting styles from Production Environment...`);
         const prodStyles = await this.extractAllStyles(comparePage, includeHidden);
         logExecution(`  ✓ Extracted ${prodStyles.length} elements from Production`);
+        if (prodStyles.length > 0) {
+          logExecution(`    Sample elements: ${prodStyles.slice(0, 3).map(e => e.selector).join(', ')}`);
+        }
 
         logExecution(`  🔍 Phase 3: Comparing CSS properties...`);
         const results = await this.compareAndGenerateResults(
@@ -541,7 +611,9 @@ export class VisualComprehensivePlugin implements ValidationPlugin {
           viewport.name,
           viewport.width,
           lowerPage,
-          logExecution
+          logExecution,
+          checkLevel,
+          seenElementSignatures
         );
 
         allResults.push(...results);

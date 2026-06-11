@@ -28,7 +28,8 @@ const DEFAULT_CONFIG: AppConfig = {
       subTests: [
         { id: 'pageAvailability', name: 'Page Availability (404/Broken routes check)', enabled: true, description: 'All pages accessible, no unexpected 404, no broken routes' },
         { id: 'contentAccuracy', name: 'Content Accuracy (Meta titles, headers, footers)', enabled: true, description: 'Page titles, H1-H4, main content, footer, images present' },
-        { id: 'richContent', name: 'Rich Content (Videos, tabs, accordions)', enabled: true, description: 'Videos load, embedded content load, accordions and tabs work' }
+        { id: 'richContent', name: 'Rich Content (Videos, tabs, accordions)', enabled: true, description: 'Videos load, embedded content load, accordions and tabs work' },
+        { id: 'textComparison', name: 'Text Content Comparison', enabled: true, description: 'Compare text content across different environments (e.g., "Loan Amount of up to Rs.5 Crore*" vs "Loan Amount of Rs. 5 Cr*")' }
       ]
     },
     {
@@ -190,11 +191,15 @@ export class ConfigRepository {
       const mergedCategories = DEFAULT_CONFIG.categories.map(defaultCat => {
         const parsedCat = parsed.categories?.find(c => c.id === defaultCat.id);
         if (!parsedCat) return defaultCat;
-        
+
         const mergedSubTests = defaultCat.subTests.map(defaultSub => {
           const parsedSub = parsedCat.subTests?.find(s => s.id === defaultSub.id);
           return parsedSub ? { ...defaultSub, enabled: parsedSub.enabled } : defaultSub;
         });
+
+        // Also include any new subtests from parsed config that aren't in defaults
+        const newSubTests = parsedCat.subTests?.filter(s => !defaultCat.subTests.find(d => d.id === s.id)) || [];
+        mergedSubTests.push(...newSubTests);
 
         return {
           ...defaultCat,

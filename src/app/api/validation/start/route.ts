@@ -35,6 +35,12 @@ export async function POST(request: Request) {
         return NextResponse.json({ error: 'At least one test category must be selected' }, { status: 400 });
       }
 
+      const testDesktop = formData.get('testDesktop') === 'true';
+      const testTablet = formData.get('testTablet') === 'true';
+      const testMobile = formData.get('testMobile') === 'true';
+      const hiddenComponentOption = (formData.get('hiddenComponentOption') as string) || 'avoid';
+      const checkLevel = (formData.get('checkLevel') as string) || 'micro';
+
       const lowerUrls = await parseFileContent(lowerEnvFile);
       const productionUrls = await parseFileContent(productionEnvFile);
 
@@ -58,7 +64,12 @@ export async function POST(request: Request) {
         productionUrls,
         limitedPages,
         pagesCount,
-        selectedCategoryIds
+        selectedCategoryIds,
+        testDesktop,
+        testTablet,
+        testMobile,
+        hiddenComponentOption,
+        checkLevel
       } as any);
 
       return NextResponse.json({ success: true, runId });
@@ -73,7 +84,12 @@ export async function POST(request: Request) {
         compareWebpage,
         limitedPages,
         pagesCount,
-        selectedCategoryIds
+        selectedCategoryIds,
+        testDesktop = true,
+        testTablet = true,
+        testMobile = true,
+        hiddenComponentOption = 'avoid',
+        checkLevel = 'micro'
       } = body;
 
       if (!runMode) {
@@ -104,7 +120,12 @@ export async function POST(request: Request) {
         compareWebpage,
         limitedPages: !!limitedPages,
         pagesCount: Number(pagesCount) || 5,
-        selectedCategoryIds
+        selectedCategoryIds,
+        testDesktop,
+        testTablet,
+        testMobile,
+        hiddenComponentOption,
+        checkLevel
       } as any);
 
       return NextResponse.json({ success: true, runId });

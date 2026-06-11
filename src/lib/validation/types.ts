@@ -13,6 +13,11 @@ export interface ValidationContext {
   logExecution: (msg: string) => void;
   logBrowser: (type: string, text: string, url: string) => void;
   logNetwork: (url: string, status: number, statusText: string, error?: string) => void;
+  testDesktop?: boolean;
+  testTablet?: boolean;
+  testMobile?: boolean;
+  hiddenComponentOption?: 'avoid' | 'with';
+  checkLevel?: 'highlevel' | 'micro';
 }
 
 export interface ValidationPlugin {

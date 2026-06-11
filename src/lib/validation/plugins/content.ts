@@ -11,6 +11,7 @@ export class ContentValidationPlugin implements ValidationPlugin {
     const { lowerPage, relativeUrl, enabledSubTests, logExecution } = context;
 
     logExecution('Executing Content Validation...');
+    logExecution(`Enabled SubTests: ${Array.from(enabledSubTests).join(', ')}`);
 
     // 1. Page Availability
     if (enabledSubTests.has('pageAvailability')) {
@@ -53,31 +54,234 @@ export class ContentValidationPlugin implements ValidationPlugin {
       }
     }
 
-    // 2. Content Accuracy
+    // 2. DEEP RECURSIVE DOM TEXT VALIDATION
+    if (enabledSubTests.has('textComparison') && context.comparePage) {
+      try {
+        logExecution('Starting deep recursive DOM text validation...');
+
+        // Extract all DOM nodes with direct text recursively
+        const extractDOMNodes = () => {
+          return `
+            (function() {
+              const nodes = [];
+              const IGNORE_TAGS = ['script', 'style', 'noscript', 'iframe', 'meta', 'head'];
+              const IGNORE_CLASSES = /tracking|analytics|ga-|gtag|gtm|csrf|token|_ga|_gat|sid|sessionid/i;
+
+              function getCSSSelector(el) {
+                let path = [];
+                while (el && el.nodeType === 1) {
+                  let selector = el.tagName.toLowerCase();
+                  if (el.id) {
+                    selector += '#' + el.id;
+                    path.unshift(selector);
+                    break;
+                  } else {
+                    let siblings = Array.from(el.parentNode.children || [])
+                      .filter(e => e.tagName === el.tagName);
+                    if (siblings.length > 1) {
+                      let index = siblings.indexOf(el) + 1;
+                      selector += ':nth-of-type(' + index + ')';
+                    }
+                  }
+
+                  let classes = (el.className || '').split(/\\s+/)
+                    .filter(c => c && !IGNORE_CLASSES.test(c));
+                  if (classes.length > 0) {
+                    selector += '.' + classes.slice(0, 2).join('.');
+                  }
+
+                  path.unshift(selector);
+                  el = el.parentElement;
+                }
+                return path.join(' > ') || 'body';
+              }
+
+              function getDirectText(el) {
+                let text = '';
+                for (let node of el.childNodes) {
+                  if (node.nodeType === 3) {
+                    let t = node.textContent.trim();
+                    if (t) text += t + ' ';
+                  }
+                }
+                return text.trim();
+              }
+
+              function shouldIgnore(el) {
+                if (!el || IGNORE_TAGS.includes(el.tagName.toLowerCase())) return true;
+                if (el.getAttribute('aria-hidden') === 'true') return true;
+                let style = getComputedStyle(el);
+                if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') return true;
+                if (IGNORE_CLASSES.test(el.className)) return true;
+                return false;
+              }
+
+              function traverse(el, depth) {
+                if (shouldIgnore(el)) return;
+
+                let text = getDirectText(el);
+                if (text && text.length > 2) {
+                  nodes.push({
+                    selector: getCSSSelector(el),
+                    tag: el.tagName.toLowerCase(),
+                    level: depth,
+                    text: text
+                  });
+                }
+
+                Array.from(el.children || []).forEach(child => {
+                  traverse(child, depth + 1);
+                });
+              }
+
+              if (document.body) {
+                traverse(document.body, 0);
+              }
+
+              return nodes;
+            })()
+          `;
+        };
+
+        // Extract from LOCAL environment
+        const localNodes = (await lowerPage.evaluate(extractDOMNodes())) as any[];
+
+        // Extract from UAT environment
+        const uatNodes = (await context.comparePage.evaluate(extractDOMNodes())) as any[];
+
+        logExecution(`Found ${localNodes.length} text nodes in LOCAL, ${uatNodes.length} in UAT`);
+
+        // Match nodes and find differences
+        const matchedUAT = new Set();
+        const differences = [];
+        let totalChecked = localNodes.length + uatNodes.length;
+        let totalDifferences = 0;
+
+        // Helper: Calculate text similarity
+        const textSimilarity = (text1: string, text2: string): number => {
+          const t1 = text1.toLowerCase().substring(0, 100);
+          const t2 = text2.toLowerCase().substring(0, 100);
+          if (t1 === t2) return 1;
+
+          const len = Math.max(t1.length, t2.length);
+          let matches = 0;
+          for (let i = 0; i < Math.min(t1.length, t2.length); i++) {
+            if (t1[i] === t2[i]) matches++;
+          }
+          return matches / len;
+        };
+
+        localNodes.forEach((localNode) => {
+          // Strategy 1: Try EXACT TEXT match first
+          let uatMatch = uatNodes.find((n, idx) =>
+            !matchedUAT.has(idx) && n.text === localNode.text
+          );
+
+          // Strategy 2: Try EXACT SELECTOR match
+          if (!uatMatch) {
+            uatMatch = uatNodes.find((n, idx) =>
+              !matchedUAT.has(idx) && n.selector === localNode.selector
+            );
+          }
+
+          // Strategy 3: Try similar text (>80% match) + same tag
+          if (!uatMatch) {
+            let bestMatch: any = null;
+            let bestScore = 0;
+            uatNodes.forEach((n, idx) => {
+              if (!matchedUAT.has(idx) && n.tag === localNode.tag) {
+                const score = textSimilarity(localNode.text, n.text);
+                if (score > bestScore && score > 0.7) {
+                  bestScore = score;
+                  bestMatch = { node: n, idx };
+                }
+              }
+            });
+            if (bestMatch) {
+              uatMatch = bestMatch.node;
+              matchedUAT.add(bestMatch.idx);
+            }
+          }
+
+          if (uatMatch) {
+            if (!matchedUAT.has(uatNodes.indexOf(uatMatch))) {
+              const idx = uatNodes.indexOf(uatMatch);
+              matchedUAT.add(idx);
+            }
+
+            if (localNode.text !== uatMatch.text) {
+              totalDifferences++;
+
+              // Determine difference type
+              let diffType = 'Modified';
+              if (!uatMatch.text) diffType = 'Missing in UAT';
+              else if (!localNode.text) diffType = 'Added in UAT';
+              else if (localNode.text.toLowerCase() === uatMatch.text.toLowerCase()) diffType = 'Capitalization';
+              else if (localNode.text.replace(/\\s+/g, '') === uatMatch.text.replace(/\\s+/g, '')) diffType = 'Whitespace';
+
+              let severity = 'Minor';
+              const charDiff = Math.abs(localNode.text.length - uatMatch.text.length);
+              const wordDiff = Math.abs(
+                localNode.text.split(/\\s+/).length -
+                uatMatch.text.split(/\\s+/).length
+              );
+
+              if (charDiff > 50 || wordDiff > 5) severity = 'Major';
+              if (charDiff > 200 || wordDiff > 10) severity = 'Critical';
+
+              differences.push({
+                selector: localNode.selector,
+                tag: localNode.tag,
+                level: localNode.level <= 2 ? 'Parent' : localNode.level <= 5 ? 'Child' : 'Leaf',
+                localText: localNode.text.substring(0, 150),
+                uatText: uatMatch.text.substring(0, 150),
+                diffType,
+                severity,
+                charDiff,
+                wordDiff
+              });
+
+              results.push({
+                pageUrl: relativeUrl,
+                category: this.name,
+                subTest: 'Text Content Comparison',
+                expectedValue: localNode.text.substring(0, 100),
+                actualValue: uatMatch.text.substring(0, 100),
+                differenceDescription: `${localNode.tag.toUpperCase()} [${diffType}]\nLocal: "${localNode.text.substring(0, 100)}"\nUAT: "${uatMatch.text.substring(0, 100)}"`,
+                severity: severity as any,
+                status: 'WARNING',
+                elementSelector: localNode.selector,
+                elementTag: localNode.tag,
+                timestamp: new Date().toISOString()
+              });
+            }
+          }
+        });
+
+        logExecution(`DOM Validation Complete: Total checked=${totalChecked}, Differences found=${totalDifferences}`);
+
+      } catch (err: any) {
+        logExecution(`Error in DOM text validation: ${err.message}`);
+      }
+    }
+
+    // 3. Content Accuracy
     if (enabledSubTests.has('contentAccuracy')) {
       try {
         const accuracyData = await lowerPage.evaluate(() => {
           const h1s = Array.from(document.querySelectorAll('h1')).map(el => el.textContent?.trim() || '');
-          const h2s = Array.from(document.querySelectorAll('h2')).map(el => el.textContent?.trim() || '');
-          const h3s = Array.from(document.querySelectorAll('h3')).map(el => el.textContent?.trim() || '');
-          const h4s = Array.from(document.querySelectorAll('h4')).map(el => el.textContent?.trim() || '');
           const images = Array.from(document.querySelectorAll('img')).map(el => el.getAttribute('src') || '');
           const footer = document.querySelector('footer')?.textContent?.trim() || '';
-          
+
           return {
             title: document.title,
             h1Count: h1s.length,
             h1s,
-            h2Count: h2s.length,
-            h3Count: h3s.length,
-            h4Count: h4s.length,
             imagesCount: images.length,
-            hasFooter: footer.length > 0,
-            footerLength: footer.length
+            hasFooter: footer.length > 0
           };
         });
 
-        // Assertion: Standard page should have exactly one H1
         const h1Passed = accuracyData.h1Count === 1;
         results.push(await createTestResultWithElement(lowerPage, {
           pageUrl: relativeUrl,
@@ -91,7 +295,6 @@ export class ContentValidationPlugin implements ValidationPlugin {
           elementSelector: 'h1'
         }));
 
-        // Assertion: Check page title
         const titlePassed = accuracyData.title.length > 0;
         results.push(await createTestResultWithElement(lowerPage, {
           pageUrl: relativeUrl,
@@ -105,7 +308,6 @@ export class ContentValidationPlugin implements ValidationPlugin {
           elementSelector: 'title'
         }));
 
-        // Assertion: Images present
         const imagesPassed = accuracyData.imagesCount > 0;
         results.push({
           pageUrl: relativeUrl,
@@ -123,7 +325,7 @@ export class ContentValidationPlugin implements ValidationPlugin {
       }
     }
 
-    // 3. Rich Content
+    // 4. Rich Content
     if (enabledSubTests.has('richContent')) {
       try {
         const richData = await lowerPage.evaluate(() => {

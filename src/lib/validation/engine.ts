@@ -87,6 +87,11 @@ export class ValidationEngine {
     limitedPages: boolean;
     pagesCount: number;
     selectedCategoryIds: string[];
+    testDesktop?: boolean;
+    testTablet?: boolean;
+    testMobile?: boolean;
+    hiddenComponentOption?: 'avoid' | 'with';
+    checkLevel?: 'highlevel' | 'micro';
   }): Promise<string> {
     if (activeJob.status === 'running') {
       throw new Error('A validation run is already in progress.');
@@ -127,6 +132,11 @@ export class ValidationEngine {
       limitedPages: boolean;
       pagesCount: number;
       selectedCategoryIds: string[];
+      testDesktop?: boolean;
+      testTablet?: boolean;
+      testMobile?: boolean;
+      hiddenComponentOption?: 'avoid' | 'with';
+      checkLevel?: 'highlevel' | 'micro';
     }
   ) {
     const config = ConfigRepository.getConfig();
@@ -323,6 +333,8 @@ export class ValidationEngine {
             logExecution(`Navigating UAT: ${lowerUrl}`);
             const res = await lowerPage.goto(lowerUrl, { waitUntil: 'load', timeout: 25000 });
             lowerHeaders = res ? res.headers() : {};
+            // Wait for network idle to ensure all JavaScript has executed and DOM is fully rendered
+            await lowerPage.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
           } catch (e: any) {
             const msg = e?.message || String(e);
             logExecution(`Failed to navigate UAT page ${lowerUrl}: ${msg}`);
@@ -333,6 +345,8 @@ export class ValidationEngine {
             logExecution(`Navigating Prod: ${compareUrl}`);
             const res = await comparePage.goto(compareUrl, { waitUntil: 'load', timeout: 25000 });
             compareHeaders = res ? res.headers() : {};
+            // Wait for network idle to ensure all JavaScript has executed and DOM is fully rendered
+            await comparePage.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
           } catch (e: any) {
             const msg = e?.message || String(e);
             logExecution(`Failed to navigate Prod page ${compareUrl}: ${msg}`);
@@ -349,10 +363,16 @@ export class ValidationEngine {
             compareHeaders,
             enabledSubTests: new Set<string>(),
             logExecution,
-            logBrowser: (type, text, url) => browserLogs.push({ timestamp: new Date().toISOString(), type, text, url }),
-            logNetwork: (url, status, statusText, error) =>
-              networkLogs.push({ timestamp: new Date().toISOString(), url, status, statusText, error })
-          };
+            logBrowser: (type: string, text: string, url: string) => browserLogs.push({ timestamp: new Date().toISOString(), type, text, url }),
+            logNetwork: (url: string, status: number, statusText: string, error?: string) =>
+              networkLogs.push({ timestamp: new Date().toISOString(), url, status, statusText, error }),
+            // Add viewport and hidden component options
+            testDesktop: (params as any).testDesktop !== false,
+            testTablet: (params as any).testTablet !== false,
+            testMobile: (params as any).testMobile !== false,
+            hiddenComponentOption: ((params as any).hiddenComponentOption || 'avoid') as 'avoid' | 'with',
+            checkLevel: ((params as any).checkLevel || 'micro') as 'highlevel' | 'micro'
+          } as any;
 
           await runPluginsForPage(context);
 
@@ -515,6 +535,8 @@ export class ValidationEngine {
           logExecution(`Navigating Lower: ${lowerUrl}`);
           const res = await lowerPage.goto(lowerUrl, { waitUntil: 'load', timeout: 25000 });
           lowerHeaders = res ? res.headers() : {};
+          // Wait for network idle to ensure all JavaScript has executed and DOM is fully rendered
+          await lowerPage.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
         } catch (e: any) {
           const msg = e?.message || String(e);
           logExecution(`Failed to navigate Lower page ${lowerUrl}: ${msg}`);
@@ -525,6 +547,8 @@ export class ValidationEngine {
           logExecution(`Navigating Compare: ${compareUrl}`);
           const res = await comparePage.goto(compareUrl, { waitUntil: 'load', timeout: 25000 });
           compareHeaders = res ? res.headers() : {};
+          // Wait for network idle to ensure all JavaScript has executed and DOM is fully rendered
+          await comparePage.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
         } catch (e: any) {
           const msg = e?.message || String(e);
           logExecution(`Failed to navigate Compare page ${compareUrl}: ${msg}`);
@@ -541,10 +565,16 @@ export class ValidationEngine {
           compareHeaders,
           enabledSubTests: new Set<string>(),
           logExecution,
-          logBrowser: (type, text, url) => browserLogs.push({ timestamp: new Date().toISOString(), type, text, url }),
-          logNetwork: (url, status, statusText, error) =>
-            networkLogs.push({ timestamp: new Date().toISOString(), url, status, statusText, error })
-        };
+          logBrowser: (type: string, text: string, url: string) => browserLogs.push({ timestamp: new Date().toISOString(), type, text, url }),
+          logNetwork: (url: string, status: number, statusText: string, error?: string) =>
+            networkLogs.push({ timestamp: new Date().toISOString(), url, status, statusText, error }),
+          // Add viewport and hidden component options
+          testDesktop: params.testDesktop !== false,
+          testTablet: params.testTablet !== false,
+          testMobile: params.testMobile !== false,
+          hiddenComponentOption: params.hiddenComponentOption || 'avoid',
+          checkLevel: params.checkLevel || 'micro'
+        } as any;
 
         await runPluginsForPage(context);
 
@@ -671,6 +701,8 @@ export class ValidationEngine {
           logExecution(`Navigating Lower: ${lowerUrl}`);
           const res = await lowerPage.goto(lowerUrl, { waitUntil: 'load', timeout: 25000 });
           lowerHeaders = res ? res.headers() : {};
+          // Wait for network idle to ensure all JavaScript has executed and DOM is fully rendered
+          await lowerPage.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
         } catch (e: any) {
           const msg = e?.message || String(e);
           logExecution(`Failed to navigate Lower page ${lowerUrl}: ${msg}`);
@@ -681,6 +713,8 @@ export class ValidationEngine {
           logExecution(`Navigating Production: ${compareUrl}`);
           const res = await comparePage.goto(compareUrl, { waitUntil: 'load', timeout: 25000 });
           compareHeaders = res ? res.headers() : {};
+          // Wait for network idle to ensure all JavaScript has executed and DOM is fully rendered
+          await comparePage.waitForLoadState('networkidle', { timeout: 15000 }).catch(() => {});
         } catch (e: any) {
           const msg = e?.message || String(e);
           logExecution(`Failed to navigate Production page ${compareUrl}: ${msg}`);
@@ -697,10 +731,16 @@ export class ValidationEngine {
           compareHeaders,
           enabledSubTests: new Set<string>(),
           logExecution,
-          logBrowser: (type, text, url) => browserLogs.push({ timestamp: new Date().toISOString(), type, text, url }),
-          logNetwork: (url, status, statusText, error) =>
-            networkLogs.push({ timestamp: new Date().toISOString(), url, status, statusText, error })
-        };
+          logBrowser: (type: string, text: string, url: string) => browserLogs.push({ timestamp: new Date().toISOString(), type, text, url }),
+          logNetwork: (url: string, status: number, statusText: string, error?: string) =>
+            networkLogs.push({ timestamp: new Date().toISOString(), url, status, statusText, error }),
+          // Add viewport and hidden component options
+          testDesktop: params.testDesktop !== false,
+          testTablet: params.testTablet !== false,
+          testMobile: params.testMobile !== false,
+          hiddenComponentOption: params.hiddenComponentOption || 'avoid',
+          checkLevel: params.checkLevel || 'micro'
+        } as any;
 
         await runPluginsForPage(context);
 

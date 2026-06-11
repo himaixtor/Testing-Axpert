@@ -22,6 +22,12 @@
           "name": "Rich Content (Videos, tabs, accordions)",
           "enabled": true,
           "description": "Videos load, embedded content load, accordions and tabs work"
+        },
+        {
+          "id": "textComparison",
+          "name": "Text Content Comparison",
+          "enabled": true,
+          "description": "Compare text content across different environments (e.g., 'Loan Amount of up to Rs.5 Crore*' vs 'Loan Amount of Rs. 5 Cr*')"
         }
       ]
     },
@@ -328,6 +334,37 @@
           "name": "Button Styling Details",
           "enabled": true,
           "description": "Colors, border radius, hover/active/disabled states, alignment"
+        }
+      ]
+    },
+    {
+      "id": "visual-comprehensive",
+      "name": "🎬 VISUAL COMPREHENSIVE (BackstopJS + Applitools + Percy + Chromatic)",
+      "enabled": true,
+      "subTests": [
+        {
+          "id": "backstopjs",
+          "name": "BackstopJS - Pixel Perfect Comparison",
+          "enabled": false,
+          "description": "Pixel-level visual differences, text wrapping, spacing, colors"
+        },
+        {
+          "id": "applitools",
+          "name": "Applitools Eyes - AI Visual Testing",
+          "enabled": false,
+          "description": "AI-powered visual differences, layout changes, font rendering"
+        },
+        {
+          "id": "percy",
+          "name": "Percy - Cloud Regression",
+          "enabled": false,
+          "description": "Cloud-based visual regression, baseline management, PR integration"
+        },
+        {
+          "id": "chromatic",
+          "name": "Chromatic - Component Testing",
+          "enabled": true,
+          "description": "Component-level visual changes, theme variations, breakpoints"
         }
       ]
     }

@@ -41,6 +41,13 @@ interface DetailedReport extends ReportSummary {
     severity: 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL';
     status: 'PASS' | 'WARNING' | 'FAIL';
     timestamp: string;
+    elementSelector?: string;
+    elementId?: string;
+    elementClass?: string;
+    elementTag?: string;
+    viewportName?: string;
+    viewportWidth?: number;
+    screenWidth?: number;
   }[];
   logs: {
     execution: string[];
@@ -97,6 +104,8 @@ export default function DashboardPage() {
   const [testTablet, setTestTablet] = useState(true);
   const [testMobile, setTestMobile] = useState(true);
   const [hiddenComponentOption, setHiddenComponentOption] = useState<'avoid' | 'with'>('avoid');
+  const [checkLevel, setCheckLevel] = useState<'highlevel' | 'micro'>('micro');
+  const [isPaused, setIsPaused] = useState(false);
 
   // Execution states
   const [isRunning, setIsRunning] = useState(false);
@@ -291,6 +300,7 @@ export default function DashboardPage() {
         formData.append('testTablet', String(testTablet));
         formData.append('testMobile', String(testMobile));
         formData.append('hiddenComponentOption', hiddenComponentOption);
+        formData.append('checkLevel', checkLevel);
 
         const res = await fetch('/api/validation/start', {
           method: 'POST',
@@ -317,7 +327,8 @@ export default function DashboardPage() {
             testDesktop,
             testTablet,
             testMobile,
-            hiddenComponentOption
+            hiddenComponentOption,
+            checkLevel
           })
         });
 
@@ -626,6 +637,38 @@ export default function DashboardPage() {
             </div>
 
             <div>
+              <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '8px', fontWeight: 600 }}>
+                🔍 Check Level
+              </label>
+              <div style={{ display: 'flex', gap: '16px' }}>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', cursor: 'pointer' }}>
+                  <input
+                    type="radio"
+                    name="check-level"
+                    value="highlevel"
+                    checked={checkLevel === 'highlevel'}
+                    onChange={() => setCheckLevel('highlevel')}
+                    disabled={isRunning}
+                    style={{ accentColor: 'var(--accent-primary)' }}
+                  />
+                  Highlevel (Critical/High Issues Only)
+                </label>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', cursor: 'pointer' }}>
+                  <input
+                    type="radio"
+                    name="check-level"
+                    value="micro"
+                    checked={checkLevel === 'micro'}
+                    onChange={() => setCheckLevel('micro')}
+                    disabled={isRunning}
+                    style={{ accentColor: 'var(--accent-primary)' }}
+                  />
+                  Micro (All Issues)
+                </label>
+              </div>
+            </div>
+
+            <div>
               <label style={{ display: 'block', fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '8px' }}>
                 Export Result Format
               </label>
@@ -805,9 +848,31 @@ export default function DashboardPage() {
         {/* Live progress view */}
         {isRunning && (
           <div className="glass-panel" style={{ padding: '24px', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '1.4rem', marginBottom: '8px' }}>Validating Migration Environment</h2>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+              <h2 style={{ fontSize: '1.4rem', margin: 0 }}>Validating Migration Environment</h2>
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <button
+                  onClick={() => setIsPaused(!isPaused)}
+                  className="btn-secondary"
+                  style={{ padding: '10px 16px', fontSize: '0.85rem' }}
+                >
+                  {isPaused ? '▶️ Resume' : '⏸️ Pause'}
+                </button>
+                <button
+                  onClick={() => {
+                    if (confirm('Are you sure you want to stop? Current progress will be saved.')) {
+                      setIsRunning(false);
+                    }
+                  }}
+                  className="btn-secondary"
+                  style={{ padding: '10px 16px', fontSize: '0.85rem', color: 'var(--color-fail)' }}
+                >
+                  ⏹️ Stop
+                </button>
+              </div>
+            </div>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '24px' }}>
-              Crawl and regression checks in progress. Do not navigate away.
+              {isPaused ? '⏸️ Paused - Click Resume to continue' : 'Crawl and regression checks in progress. Do not navigate away.'}
             </p>
 
             {/* Circular Progress Display */}
@@ -1034,6 +1099,7 @@ export default function DashboardPage() {
                   </thead>
                   <tbody>
                     {report.results
+                      .filter(r => r.status !== 'PASS')
                       .filter(r => statusFilter === 'ALL' || r.status === statusFilter)
                       .filter(r =>
                         r.pageUrl.toLowerCase().includes(searchFilter.toLowerCase()) ||

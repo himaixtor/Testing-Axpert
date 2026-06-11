@@ -92,7 +92,8 @@ export class ReportExporter {
       fgColor: { argb: 'FF0F172A' } // Slate 900
     };
 
-    report.results.forEach(res => {
+    // Filter out PASS results - only show WARNING and FAIL
+    report.results.filter(res => res.status !== 'PASS').forEach(res => {
       const row = detailsSheet.addRow([
         res.pageUrl,
         res.elementId || 'N/A',
@@ -183,7 +184,8 @@ export class ReportExporter {
 
     const lines = [headers.map(escapeCsv).join(',')];
 
-    report.results.forEach(res => {
+    // Filter out PASS results - only show WARNING and FAIL
+    report.results.filter(res => res.status !== 'PASS').forEach(res => {
       const line = [
         res.pageUrl,
         res.elementId || 'N/A',
@@ -234,7 +236,8 @@ export class ReportExporter {
     xml += '  </summary>\n';
 
     xml += '  <results>\n';
-    report.results.forEach(res => {
+    // Filter out PASS results - only show WARNING and FAIL
+    report.results.filter(res => res.status !== 'PASS').forEach(res => {
       xml += '    <result>\n';
       xml += `      <pageUrl>${escapeXml(res.pageUrl)}</pageUrl>\n`;
       xml += `      <category>${escapeXml(res.category)}</category>\n`;
