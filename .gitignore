@@ -2,6 +2,7 @@
 .next/
 out/
 .swc/
+public/
 
 # Node
 node_modules/
