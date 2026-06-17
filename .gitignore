@@ -1,18 +1,36 @@
 # Next.js
 .next/
 out/
+.swc/
 
 # Node
 node_modules/
+package-lock.json
+
+# Environment
+.env.local
+.env.*.local
 
 # Local logs
+*.log
 dev.log
 
 # Visual regression / reports (generated)
 backstop_data/
 data/reports/
+data/reports_index.json
 
 # Backstop run folder (keep only config)
 visual-test-results/*
 !visual-test-results/backstop.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
 
